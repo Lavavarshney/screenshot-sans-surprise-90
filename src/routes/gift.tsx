@@ -90,7 +90,6 @@ function GiftPage() {
                     index={0}
                     rotate={-2}
                     variant="polaroid"
-                    initialSrc="/assets/dance.jpeg"
                   />
                 </div>
                 <div className="akanxi-photo-frame-2">
