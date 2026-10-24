@@ -73,14 +73,22 @@ function LandingPage() {
         aria-hidden="true"
         className="confetti-field pointer-events-none absolute inset-0 opacity-60"
       />
-      <main className="relative mx-auto max-w-6xl px-5 pb-24 pt-8 md:px-10 md:pt-12">
+      <div aria-hidden="true" className="scrapbook-edge-decor pointer-events-none absolute inset-0 overflow-hidden">
+        <span className="css-bow bow-top-left" /><span className="css-bow bow-top-right" />
+        <span className="lace-strip lace-left" /><span className="lace-strip lace-right" />
+        <span className="sticker sticker-corner sticker-one">BIRTHDAY<br />GIRL</span>
+        <span className="sticker sticker-corner sticker-two">LOVE<br />YOU</span>
+        <span className="paper-flower flower-one">✦</span><span className="paper-flower flower-two">✿</span>
+        <span className="paper-flower flower-three">✦</span><span className="paper-flower flower-four">✿</span>
+      </div>
+      <main className="relative mx-auto max-w-7xl px-4 pb-24 pt-5 md:px-8 md:pt-8">
         <div className="mb-8 flex items-center justify-center gap-3 font-body text-[10px] font-bold uppercase tracking-[0.35em] text-burgundy/75">
           <span className="h-px w-10 bg-burgundy/30" />
           a little book of us
           <span className="h-px w-10 bg-burgundy/30" />
         </div>
         {/* ------- headline ------- */}
-        <header className="torn-paper relative border border-blush/35 bg-paper/85 px-4 py-7 text-center shadow-paper md:px-8 md:py-10">
+        <header className="birthday-header torn-paper relative border-2 border-blush/35 bg-paper/90 px-4 py-8 text-center shadow-paper md:px-8 md:py-12">
           <Tape tone="blush" rotate={-6} className="left-[6%] top-[-8px] hidden md:block" />
           <Tape tone="sage" rotate={5} className="right-[7%] top-[-6px] hidden md:block" />
           <CutoutHeadline text={`HAPPY BIRTHDAY, ${scrapbook.name.toUpperCase()}`} />
@@ -96,9 +104,11 @@ function LandingPage() {
         </header>
 
         {/* ------- collage ------- */}
-        <section className="relative mt-12 grid gap-12 md:mt-16 md:grid-cols-12 md:gap-x-10 md:gap-y-3">
+        <section className="birthday-collage relative mt-8 grid gap-10 md:mt-12 md:grid-cols-12 md:gap-x-8 md:gap-y-5">
           {/* large portrait */}
-          <div className="relative md:col-span-7">
+          <div className="relative md:col-span-7 md:pt-2">
+            <span className="collage-label label-portrait">best memories</span>
+            <span className="ribbon-tail ribbon-tail-one" />
             <PhotoFrame
               photo={scrapbook.heroPhoto}
               variant="paper"
@@ -113,7 +123,9 @@ function LandingPage() {
           </div>
 
           {/* supporting landscape + margin note */}
-          <div className="relative flex flex-col items-center gap-10 md:col-span-5 md:pt-10">
+          <div className="relative flex flex-col items-center gap-8 md:col-span-5 md:pt-4">
+            <span className="collage-label label-note">made with love</span>
+            <span className="mini-cake" aria-hidden="true"><i /><b /></span>
             <PhotoFrame
               photo={scrapbook.supportPhoto}
               variant="paper"
@@ -134,7 +146,10 @@ function LandingPage() {
           </div>
 
           {/* taped-in polaroid pair */}
-          <div className="relative flex flex-wrap items-start justify-center gap-8 md:col-span-12 md:mt-4 md:justify-start md:pl-16">
+          <div className="relative flex flex-wrap items-start justify-center gap-7 md:col-span-12 md:mt-0 md:justify-center md:gap-12">
+            <span className="collage-label label-snapshot">little moments</span>
+            <span className="scrap-note scrap-note-left">so lucky<br />to have you</span>
+            <span className="scrap-note scrap-note-right">made for<br />my favorite girl</span>
             <PhotoFrame
               photo={scrapbook.snapshots[0]}
               variant="polaroid"
