@@ -25,9 +25,10 @@ export function EditablePhotoFrame({
   index: number;
   rotate?: number;
   variant?: "paper" | "polaroid";
+  initialSrc?: string;
 }) {
   const inputRef = useRef<HTMLInputElement>(null);
-  const [src, setSrc] = useState<string | null>(null);
+  const [src, setSrc] = useState<string | null>(initialSrc ?? null);
   const [caption, setCaption] = useState("a little memory ♡");
   const polaroid = variant === "polaroid";
 
@@ -40,7 +41,7 @@ export function EditablePhotoFrame({
   }
 
   return (
-  <figure
+    <figure
       className={`editable-photo-frame relative ${polaroid ? "bg-paper p-3 pb-4" : "bg-ivory p-2.5 pb-4"}`}
       style={{ transform: `rotate(${rotate}deg)` }}
     >
@@ -50,6 +51,7 @@ export function EditablePhotoFrame({
             src={src}
             alt={`Uploaded scrapbook photo ${index + 1}`}
             className="block h-full w-full object-cover"
+            onError={() => setSrc(null)}
           />
         ) : (
           <button

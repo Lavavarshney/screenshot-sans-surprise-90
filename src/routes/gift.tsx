@@ -86,7 +86,12 @@ function GiftPage() {
               </p>
               <div className="akanxi-photo-collage mt-7 text-left">
                 <div className="akanxi-photo-frame-1">
-                  <EditablePhotoFrame index={0} rotate={-2} variant="polaroid" />
+                  <EditablePhotoFrame
+                    index={0}
+                    rotate={-2}
+                    variant="polaroid"
+                    initialSrc="/assets/dance.jpeg"
+                  />
                 </div>
                 <div className="akanxi-photo-frame-2">
                   <EditablePhotoFrame index={1} rotate={2.5} variant="paper" />
