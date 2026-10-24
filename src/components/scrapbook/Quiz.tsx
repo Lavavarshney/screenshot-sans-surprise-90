@@ -69,6 +69,7 @@ export function Quiz() {
   }
 
   const q = questions[step];
+  if (!q) return null;
 
   return (
     <div className="relative w-full max-w-lg bg-paper p-7 shadow-paper md:p-10">
