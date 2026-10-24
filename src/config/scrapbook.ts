@@ -72,7 +72,7 @@ export const scrapbook = {
       width: 1024,
       height: 1024,
     },
-  ] as ScrapbookPhoto[],
+  ] as [ScrapbookPhoto, ScrapbookPhoto],
 
   /** Best-friend quiz — six to eight questions. */
   quiz: {

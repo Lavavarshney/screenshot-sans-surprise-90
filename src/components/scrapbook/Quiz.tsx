@@ -12,9 +12,11 @@ export function Quiz() {
 
   const answer = (i: number) => {
     if (chosen !== null) return;
+    const question = questions[step];
+    if (!question) return;
     setChosen(i);
     window.setTimeout(() => {
-      if (i === questions[step].correctIndex) setScore((s) => s + 1);
+      if (i === question.correctIndex) setScore((s) => s + 1);
       setChosen(null);
       if (step + 1 < questions.length) setStep(step + 1);
       else setDone(true);
