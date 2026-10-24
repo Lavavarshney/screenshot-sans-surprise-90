@@ -52,7 +52,7 @@ function GiftPage() {
           ← back to the cover
         </Link>
         <section className="mx-auto flex min-h-screen max-w-3xl flex-col items-center justify-center px-5 py-20">
-          <div className="relative w-full max-w-2xl">
+          <div className="relative w-full max-w-[1440px]">
             <div className="css-bow bow-note-left" aria-hidden="true" />
             <div
               className="torn-paper relative bg-paper p-8 text-center shadow-photo md:p-12"
@@ -90,12 +90,10 @@ function GiftPage() {
                 Add your own photos and make this page yours.
               </p>
               <div className="akanxi-scrapbook-stage relative mt-7 text-left">
-                <span className="gift-margin-note gift-margin-note-left">little moments</span>
-                <span className="gift-margin-note gift-margin-note-right">made with love</span>
-                <span className="gift-sticker gift-sticker-heart">always us</span>
-                <span className="gift-sticker gift-sticker-star">best day</span>
-                <span className="gift-arrow gift-arrow-one" aria-hidden="true">↘</span>
-                <span className="gift-arrow gift-arrow-two" aria-hidden="true">↗</span>
+                <div className="scrapbook-gap-decor scrapbook-gap-decor-left" aria-hidden="true" />
+                <div className="scrapbook-gap-decor scrapbook-gap-decor-right" aria-hidden="true" />
+                <div className="scrapbook-gap-flower scrapbook-gap-flower-top" aria-hidden="true">✿</div>
+                <div className="scrapbook-gap-flower scrapbook-gap-flower-bottom" aria-hidden="true">✿</div>
                 <div className="akanxi-photo-collage">
                 <div className="akanxi-photo-frame-1">
                   <EditablePhotoFrame
