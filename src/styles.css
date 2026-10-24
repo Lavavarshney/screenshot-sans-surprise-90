@@ -573,6 +573,58 @@
   background: var(--cherry);
 }
 
+/* ---------- Landing scrapbook layers ---------- */
+.landing-paper-scrap,
+.landing-washi-word,
+.landing-collage-caption {
+  position: absolute;
+  z-index: 4;
+  pointer-events: none;
+  font-family: var(--font-hand);
+  color: var(--burgundy);
+}
+.landing-paper-scrap {
+  padding: 0.45rem 0.75rem;
+  background: var(--paper);
+  border: 1px solid color-mix(in oklab, var(--blush) 55%, transparent);
+  box-shadow: 3px 4px 0 color-mix(in oklab, var(--burgundy) 12%, transparent);
+  font-size: 1.15rem;
+  line-height: 1;
+}
+.landing-paper-scrap-one { left: 3%; top: 33%; transform: rotate(-9deg); }
+.landing-paper-scrap-two { right: 7%; bottom: 15%; transform: rotate(8deg); }
+.landing-washi-word {
+  left: 41%;
+  top: 51%;
+  padding: 0.35rem 1.25rem;
+  background: color-mix(in oklab, var(--blush) 70%, var(--paper));
+  font-size: 1.25rem;
+  transform: rotate(-4deg);
+}
+.note-pin {
+  position: absolute;
+  top: -0.35rem;
+  left: 50%;
+  width: 0.7rem;
+  height: 0.7rem;
+  border-radius: 999px;
+  background: var(--cherry);
+  box-shadow: 0 1px 0 var(--burgundy);
+  transform: translateX(-50%);
+}
+.landing-collage-caption {
+  right: 15%;
+  bottom: -1.5rem;
+  font-size: 1.2rem;
+  transform: rotate(-4deg);
+}
+@media (max-width: 767px) {
+  .landing-paper-scrap-one { left: 0; top: 34%; }
+  .landing-paper-scrap-two { right: 0; bottom: 11%; }
+  .landing-washi-word { left: 32%; top: 54%; font-size: 1rem; }
+  .landing-collage-caption { right: 4%; bottom: -1rem; }
+}
+
 /* ---------- Soft shadows ---------- */
 
 .akanxi-photo-collage {

@@ -149,6 +149,13 @@ function LandingPage() {
 
         {/* ------- collage ------- */}
         <section className="birthday-collage relative mt-4 grid gap-4 md:mt-5 md:grid-cols-12 md:gap-x-6 md:gap-y-0">
+          <span className="landing-paper-scrap landing-paper-scrap-one" aria-hidden="true">
+            little archive
+          </span>
+          <span className="landing-paper-scrap landing-paper-scrap-two" aria-hidden="true">
+            keep this day
+          </span>
+          <span className="landing-washi-word" aria-hidden="true">our little world</span>
           {/* large portrait */}
           <div className="relative md:col-span-7 md:pt-2">
             <span className="collage-label label-portrait">best memories</span>
@@ -184,6 +191,7 @@ function LandingPage() {
               className="ruled-lines relative max-w-xs bg-paper p-5 pt-8 shadow-paper"
               style={{ transform: "rotate(-1.5deg)" }}
             >
+              <span className="note-pin" aria-hidden="true" />
               <Tape tone="kraft" rotate={-5} className="-top-3 left-1/2 -translate-x-1/2" />
               <p className="font-hand text-xl leading-8 text-ink md:text-[1.35rem]">
                 {scrapbook.marginNote}
@@ -229,6 +237,7 @@ function LandingPage() {
             />
             <Squiggle className="hidden w-28 self-center opacity-70 md:block" />
             <PressedFlower className="hidden h-8 w-8 self-end opacity-75 md:ml-2 md:block" />
+            <span className="landing-collage-caption" aria-hidden="true">the days we keep replaying</span>
           </div>
         </section>
 
