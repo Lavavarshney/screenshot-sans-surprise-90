@@ -1,5 +1,5 @@
 import { createFileRoute, Link } from "@tanstack/react-router";
-import { useEffect, useState, type CSSProperties } from "react";
+import { useEffect, useState } from "react";
 import { scrapbook } from "@/config/scrapbook";
 import { FlowerBloom } from "@/components/scrapbook/FlowerBloom";
 import { PressedFlower, Tape } from "@/components/scrapbook/decorations";
@@ -85,16 +85,6 @@ function GiftPage() {
         ← back to the cover
       </Link>
 
-      <div
-        aria-hidden="true"
-        className="reveal-confetti pointer-events-none absolute inset-0 overflow-hidden"
-      >
-        <div className="confetti-burst-origin" aria-hidden="true">
-          {Array.from({ length: 34 }, (_, i) => (
-            <span key={i} style={{ "--i": i } as CSSProperties} />
-          ))}
-        </div>
-      </div>
       <main className="mx-auto flex min-h-screen max-w-3xl flex-col items-center justify-center px-5 py-14 text-center">
         <div className="relative w-full">
           <FlowerBloom className="h-[42vh] w-full max-w-2xl md:h-[46vh]" />
@@ -130,6 +120,13 @@ function GiftPage() {
               >
                 Turn the page
               </button>
+            </div>
+            <div className="made-with-love-frame torn-paper relative mx-auto mt-7 max-w-md bg-blush/20 px-7 py-5 shadow-paper">
+              <Tape tone="kraft" rotate={-5} className="-top-3 left-10" />
+              <Tape tone="blush" rotate={4} className="-top-3 right-10" />
+              <p className="font-body text-[10px] font-bold uppercase tracking-[0.35em] text-cherry">a tiny keepsake</p>
+              <p className="mt-2 font-hand text-3xl text-burgundy">made with love, just for you</p>
+              <p className="mt-1 font-hand text-xl text-ink/80">with every page holding a little piece of us</p>
             </div>
           </div>
         )}
