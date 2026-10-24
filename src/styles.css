@@ -607,6 +607,27 @@
   .akanxi-photo-frame-5 { grid-column: span 1; }
 }
 
+/* ---------- Handwritten margin details ---------- */
+.akanxi-scrapbook-stage { isolation: isolate; padding: 0.75rem 0.25rem 1.5rem; }
+.gift-margin-note, .gift-sticker, .gift-arrow { position: absolute; z-index: 4; pointer-events: none; font-family: var(--font-hand); color: var(--burgundy); }
+.gift-margin-note { padding: 0.35rem 0.6rem; background: color-mix(in oklab, var(--paper) 88%, transparent); border-bottom: 2px solid var(--cherry); font-size: 1.2rem; line-height: 1; }
+.gift-margin-note-left { left: -3.5rem; top: 22%; transform: rotate(-11deg); }
+.gift-margin-note-right { right: -3rem; top: 54%; transform: rotate(9deg); }
+.gift-sticker { display: grid; place-items: center; width: 4.5rem; height: 4.5rem; border: 2px solid var(--burgundy); border-radius: 48% 52% 46% 54%; background: var(--blush); box-shadow: 3px 4px 0 color-mix(in oklab, var(--burgundy) 18%, transparent); font-size: 1rem; line-height: 0.9; text-align: center; }
+.gift-sticker-heart { right: -1.25rem; top: 12%; transform: rotate(12deg); }
+.gift-sticker-star { left: -1.2rem; bottom: 12%; background: var(--gold); transform: rotate(-9deg); }
+.gift-arrow { font-size: 2.2rem; }
+.gift-arrow-one { left: 18%; top: 44%; transform: rotate(8deg); }
+.gift-arrow-two { right: 17%; bottom: 20%; transform: rotate(-8deg); }
+@media (max-width: 640px) {
+  .gift-margin-note-left { left: -0.4rem; top: -1.7rem; }
+  .gift-margin-note-right { right: 0; top: 49%; }
+  .gift-sticker-heart { right: 0; top: 8%; }
+  .gift-sticker-star { left: 0; bottom: 8%; }
+  .gift-arrow-one { left: 5%; top: 38%; }
+  .gift-arrow-two { right: 4%; bottom: 17%; }
+}
+
 @utility shadow-photo {
   box-shadow:
     0 1px 2px color-mix(in oklab, var(--ink) 12%, transparent),
