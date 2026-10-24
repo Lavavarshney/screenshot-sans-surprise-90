@@ -90,10 +90,18 @@ function GiftPage() {
                 Add your own photos and make this page yours.
               </p>
               <div className="akanxi-scrapbook-stage relative mt-7 text-left">
-                <div className="scrapbook-gap-decor scrapbook-gap-decor-left" aria-hidden="true" />
-                <div className="scrapbook-gap-decor scrapbook-gap-decor-right" aria-hidden="true" />
-                <div className="scrapbook-gap-flower scrapbook-gap-flower-top" aria-hidden="true">✿</div>
-                <div className="scrapbook-gap-flower scrapbook-gap-flower-bottom" aria-hidden="true">✿</div>
+                <aside className="scrapbook-margin scrapbook-margin-left" aria-label="Scrapbook decorations">
+                  <span className="margin-flower margin-flower-one" aria-hidden="true">✿</span>
+                  <span className="margin-doodle margin-doodle-one" aria-hidden="true">♡</span>
+                  <span className="margin-doodle margin-doodle-two" aria-hidden="true">✦</span>
+                  <span className="margin-ribbon margin-ribbon-left" aria-hidden="true" />
+                </aside>
+                <aside className="scrapbook-margin scrapbook-margin-right" aria-label="Scrapbook decorations">
+                  <span className="margin-flower margin-flower-two" aria-hidden="true">❀</span>
+                  <span className="margin-doodle margin-doodle-three" aria-hidden="true">♥</span>
+                  <span className="margin-doodle margin-doodle-four" aria-hidden="true">☆</span>
+                  <span className="margin-ribbon margin-ribbon-right" aria-hidden="true" />
+                </aside>
                 <div className="akanxi-photo-collage">
                 <div className="akanxi-photo-frame-1">
                   <EditablePhotoFrame

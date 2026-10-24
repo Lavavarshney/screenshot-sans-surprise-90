@@ -634,30 +634,22 @@
   gap: clamp(1.25rem, 3vw, 3.5rem) clamp(1rem, 2vw, 2.5rem);
 }
 
-.scrapbook-gap-decor,
-.scrapbook-gap-flower {
-  position: absolute;
-  z-index: 0;
-  pointer-events: none;
-}
-.scrapbook-gap-decor {
-  width: clamp(5rem, 9vw, 9rem);
-  height: clamp(6rem, 12vw, 12rem);
-  background: var(--paper);
-  border: 1px solid color-mix(in oklab, var(--burgundy) 12%, transparent);
-  box-shadow: 5px 7px 0 color-mix(in oklab, var(--burgundy) 8%, transparent);
-}
-.scrapbook-gap-decor::after {
-  content: "";
-  position: absolute;
-  inset: 0.7rem;
-  border: 1px dashed color-mix(in oklab, var(--cherry) 45%, transparent);
-}
-.scrapbook-gap-decor-left { left: 1%; top: 15%; transform: rotate(-8deg); }
-.scrapbook-gap-decor-right { right: 1%; top: 48%; transform: rotate(7deg); background: var(--blush); }
-.scrapbook-gap-flower { color: var(--cherry); font-size: clamp(2rem, 4vw, 4rem); opacity: 0.65; }
-.scrapbook-gap-flower-top { left: 20%; top: 4%; transform: rotate(-12deg); }
-.scrapbook-gap-flower-bottom { right: 21%; bottom: 4%; transform: rotate(14deg); }
+.scrapbook-margin { position: absolute; top: 0; bottom: 0; z-index: 1; width: clamp(8rem, 15vw, 13rem); pointer-events: none; }
+.scrapbook-margin-left { right: calc(100% + 1.5rem); }
+.scrapbook-margin-right { left: calc(100% + 1.5rem); }
+.margin-flower, .margin-doodle, .margin-ribbon { position: absolute; }
+.margin-flower { color: var(--cherry); font-size: clamp(4.5rem, 7vw, 7rem); text-shadow: 3px 3px 0 var(--paper); }
+.margin-flower-one { top: 2%; right: -0.5rem; transform: rotate(-14deg); }
+.margin-flower-two { top: 72%; left: -0.5rem; transform: rotate(12deg); }
+.margin-doodle { color: var(--burgundy); font-family: var(--font-hand); font-size: clamp(2.8rem, 4vw, 4rem); }
+.margin-doodle-one { top: 28%; left: 0; transform: rotate(-18deg); }
+.margin-doodle-two { top: 64%; right: 0; }
+.margin-doodle-three { top: 40%; right: -0.3rem; transform: rotate(12deg); }
+.margin-doodle-four { top: 81%; left: 1rem; transform: rotate(-12deg); }
+.margin-ribbon { width: 5rem; height: 3rem; border: 0.65rem solid var(--cherry); border-radius: 50%; opacity: 0.8; }
+.margin-ribbon-left { top: 54%; left: 0.4rem; transform: rotate(25deg); }
+.margin-ribbon-right { top: 69%; right: 0.3rem; transform: rotate(-25deg); }
+@media (max-width: 1024px) { .scrapbook-margin { display: none; } }
 
 .editable-photo-frame {
   width: 100%;
