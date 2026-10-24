@@ -91,18 +91,12 @@ function GiftPage() {
               </p>
               <div className="akanxi-scrapbook-stage relative mt-7 text-left">
                 <aside className="scrapbook-margin scrapbook-margin-left" aria-label="Scrapbook decorations">
-                  <span className="margin-note margin-note-rose">little things<br />I never want to forget</span>
-                  <span className="margin-stamp margin-stamp-burgundy">LOVE<br />MAIL</span>
-                  <span className="margin-tape margin-tape-top" />
                   <span className="margin-flower margin-flower-one" aria-hidden="true">✿</span>
                   <span className="margin-doodle margin-doodle-one" aria-hidden="true">♡</span>
                   <span className="margin-doodle margin-doodle-two" aria-hidden="true">✦</span>
                   <span className="margin-ribbon margin-ribbon-left" aria-hidden="true" />
                 </aside>
                 <aside className="scrapbook-margin scrapbook-margin-right" aria-label="Scrapbook decorations">
-                  <span className="margin-memory-card">remember<br /><strong>this feeling</strong><br /><small>always</small></span>
-                  <span className="margin-stamp margin-stamp-cream">AK<br />25</span>
-                  <span className="margin-tape margin-tape-mid" />
                   <span className="margin-flower margin-flower-two" aria-hidden="true">❀</span>
                   <span className="margin-doodle margin-doodle-three" aria-hidden="true">♥</span>
                   <span className="margin-doodle margin-doodle-four" aria-hidden="true">☆</span>
