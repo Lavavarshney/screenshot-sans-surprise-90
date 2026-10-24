@@ -350,9 +350,66 @@
 .paper-flower {
   position: absolute;
   color: var(--cherry);
-  font-size: 52px;
+  font-size: 64px;
   text-shadow: 2px 2px 0 var(--paper);
+  filter: drop-shadow(2px 3px 0 color-mix(in oklab, var(--burgundy) 28%, transparent));
 }
+.candyfloss {
+  position: absolute;
+  width: 86px;
+  height: 118px;
+  filter: drop-shadow(3px 4px 0 color-mix(in oklab, var(--burgundy) 22%, transparent));
+}
+.candyfloss::before {
+  content: "";
+  position: absolute;
+  left: 24px;
+  top: 8px;
+  width: 50px;
+  height: 62px;
+  border-radius: 48% 52% 45% 55%;
+  background: radial-gradient(circle at 35% 30%, var(--paper) 0 7%, transparent 8%), radial-gradient(circle at 65% 48%, var(--blush) 0 10%, transparent 11%), linear-gradient(135deg, var(--blush), var(--paper) 55%, var(--cherry));
+  border: 3px solid var(--burgundy);
+}
+.candyfloss::after {
+  content: "";
+  position: absolute;
+  left: 46px;
+  top: 66px;
+  width: 7px;
+  height: 52px;
+  background: var(--kraft);
+  border: 2px solid var(--burgundy);
+  transform: rotate(8deg);
+}
+.candyfloss i, .candyfloss b, .candyfloss em {
+  position: absolute;
+  z-index: 1;
+  display: block;
+  width: 8px;
+  height: 8px;
+  border-radius: 50%;
+  background: var(--paper);
+}
+.candyfloss i { left: 35px; top: 25px; }
+.candyfloss b { left: 60px; top: 38px; background: var(--gold); }
+.candyfloss em { left: 48px; top: 52px; background: var(--burgundy); }
+.candyfloss-left { top: 18%; left: 1%; transform: rotate(-12deg); }
+.candyfloss-right { top: 55%; right: 0; transform: rotate(13deg) scale(0.9); }
+.sticker-three { top: 12%; right: 9%; transform: rotate(9deg); background: var(--gold); color: var(--burgundy); }
+.sticker-four { top: 88%; left: 8%; transform: rotate(-16deg); background: var(--blush); color: var(--paper); }
+.bottom-flower {
+  position: absolute;
+  bottom: 1.5%;
+  color: var(--cherry);
+  font-size: 74px;
+  line-height: 1;
+  text-shadow: 2px 3px 0 var(--paper);
+  filter: drop-shadow(2px 3px 0 color-mix(in oklab, var(--burgundy) 25%, transparent));
+}
+.bottom-flower-one { left: 14%; transform: rotate(-16deg); }
+.bottom-flower-two { left: 48%; color: var(--blush); transform: rotate(10deg) scale(0.8); }
+.bottom-flower-three { right: 13%; color: var(--burgundy); transform: rotate(18deg) scale(0.9); }
 .flower-one {
   top: 22%;
   left: 4%;
