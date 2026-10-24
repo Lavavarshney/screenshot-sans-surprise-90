@@ -102,51 +102,22 @@ function GiftPage() {
                 </div>
               </div>
             </section>
-            <div className="mt-8 grid w-full gap-5 sm:grid-cols-2">
-              <div className="torn-paper relative bg-blush/20 p-7 shadow-paper md:p-9 sm:rotate-[-1.2deg]">
+            <div className="mt-8 w-full">
+              <div
+                className="torn-paper relative mx-auto w-full max-w-2xl bg-paper p-7 shadow-paper md:p-10 sm:rotate-[-0.8deg]"
+                style={{ transform: "rotate(-0.8deg)" }}
+              >
                 <p className="font-body text-[10px] font-bold uppercase tracking-[0.35em] text-cherry">
                   one more little frame
                 </p>
-                <p className="mt-3 font-hand text-3xl leading-9 text-ink">
-                  Thank you for making ordinary days feel like celebrations. I hope this scrapbook
-                  makes you smile as much as you make me smile.
-                </p>
-              </div>
-              <div className="torn-paper relative bg-paper p-7 shadow-paper md:p-9 sm:rotate-[1.4deg]">
-                <p className="font-body text-[10px] font-bold uppercase tracking-[0.35em] text-cherry">
-                  a favourite memory
-                </p>
-                <p className="mt-3 font-hand text-3xl leading-9 text-ink">
-                  The best moments are the little ones we keep replaying and laughing about
-                  together.
-                </p>
-              </div>
-              <div className="torn-paper relative bg-kraft/35 p-7 shadow-paper md:p-9 sm:rotate-[1deg]">
-                <p className="font-body text-[10px] font-bold uppercase tracking-[0.35em] text-cherry">
-                  for your keepsake box
-                </p>
-                <p className="mt-3 font-hand text-3xl leading-9 text-ink">
-                  You make every ordinary day feel a little more magical.
-                </p>
-              </div>
-              <div className="torn-paper relative bg-blush/15 p-7 shadow-paper md:p-9 sm:rotate-[-1.5deg]">
-                <p className="font-body text-[10px] font-bold uppercase tracking-[0.35em] text-cherry">
-                  a tiny promise
-                </p>
-                <p className="mt-3 font-hand text-3xl leading-9 text-ink">
-                  There will always be more memories, more pages, and more reasons to celebrate you.
-                </p>
-              </div>
-              <div
-                className="torn-paper relative col-span-full mx-auto w-full max-w-xl bg-paper p-7 shadow-paper md:p-9"
-                style={{ transform: "rotate(0.8deg)" }}
-              >
-                <p className="font-body text-[10px] font-bold uppercase tracking-[0.35em] text-cherry">
-                  made with love
-                </p>
-                <p className="mt-3 font-hand text-3xl leading-9 text-burgundy">
-                  For Akanxi, with all my love — today, tomorrow, and every page after this one.
-                </p>
+                <label className="mt-4 block text-left">
+                  <span className="sr-only">Personalized note for Akanxi</span>
+                  <textarea
+                    rows={4}
+                    placeholder="Write your personalized note here..."
+                    className="min-h-32 w-full resize-y bg-transparent font-hand text-3xl leading-9 text-burgundy outline-none placeholder:text-ink/45 focus-visible:ring-1 focus-visible:ring-burgundy"
+                  />
+                </label>
               </div>
             </div>
           </div>
