@@ -40,7 +40,7 @@ export function EditablePhotoFrame({
   }
 
   return (
-    <figure
+  <figure
       className={`editable-photo-frame relative ${polaroid ? "bg-paper p-3 pb-4" : "bg-ivory p-2.5 pb-4"}`}
       style={{ transform: `rotate(${rotate}deg)` }}
     >

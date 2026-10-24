@@ -6,7 +6,7 @@
 //  update captions below. Nothing else needs to change.
 // =====================================================================
 
-import photoHero from "@/assets/photo-hero.jpg";
+import photoHero from "@/assets/image.png";
 import photoSupport from "@/assets/photo-support.jpg";
 import photoPolaroidA from "@/assets/photo-polaroid-a.jpg";
 import photoPolaroidB from "@/assets/photo-polaroid-b.jpg";
@@ -29,7 +29,7 @@ export type QuizQuestion = {
 
 export const scrapbook = {
   /** The birthday girl's name — shown in the cutout headline. */
-  name: "Aanya",
+  name: "Akanxi",
 
   /** Handwritten note in the landing page margin. */
   marginNote:
