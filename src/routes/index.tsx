@@ -69,18 +69,34 @@ function LandingPage() {
         className="graph-lines absolute inset-x-0 top-0 h-64 opacity-40 [mask-image:linear-gradient(to_bottom,black,transparent)]"
       />
 
-      <main className="relative mx-auto max-w-6xl px-5 pb-24 pt-12 md:px-10 md:pt-16">
+      <div
+        aria-hidden="true"
+        className="confetti-field pointer-events-none absolute inset-0 opacity-60"
+      />
+      <main className="relative mx-auto max-w-6xl px-5 pb-24 pt-8 md:px-10 md:pt-12">
+        <div className="mb-8 flex items-center justify-center gap-3 font-body text-[10px] font-bold uppercase tracking-[0.35em] text-burgundy/75">
+          <span className="h-px w-10 bg-burgundy/30" />
+          a little book of us
+          <span className="h-px w-10 bg-burgundy/30" />
+        </div>
         {/* ------- headline ------- */}
-        <header className="relative px-2 text-center">
+        <header className="relative rounded-[2rem] border border-blush/25 bg-paper/60 px-4 py-7 text-center shadow-paper md:px-8 md:py-10">
           <Tape tone="blush" rotate={-6} className="left-[6%] top-[-8px] hidden md:block" />
           <Tape tone="sage" rotate={5} className="right-[7%] top-[-6px] hidden md:block" />
           <CutoutHeadline text={`HAPPY BIRTHDAY, ${scrapbook.name.toUpperCase()}`} />
           <DoodleStar className="absolute left-[12%] top-2 h-3 w-3 text-ink/50 max-md:hidden" />
           <DoodleStar className="absolute bottom-0 right-[14%] h-2 w-2 text-blush max-md:hidden" />
+          <p className="mx-auto mt-5 max-w-md font-hand text-2xl text-ink/75 md:text-3xl">
+            for the girl who makes ordinary days feel like confetti
+          </p>
+          <div className="mx-auto mt-4 flex w-fit items-center gap-2 rounded-full bg-cherry/10 px-4 py-1.5 font-body text-[10px] font-bold uppercase tracking-[0.28em] text-cherry">
+            <span className="text-gold">✦</span> birthday edition{" "}
+            <span className="text-gold">✦</span>
+          </div>
         </header>
 
         {/* ------- collage ------- */}
-        <section className="relative mt-12 grid gap-12 md:mt-16 md:grid-cols-12 md:gap-x-8 md:gap-y-0">
+        <section className="relative mt-12 grid gap-12 md:mt-16 md:grid-cols-12 md:gap-x-10 md:gap-y-3">
           {/* large portrait */}
           <div className="relative md:col-span-7">
             <PhotoFrame
@@ -139,7 +155,12 @@ function LandingPage() {
         </section>
 
         {/* ------- the present ------- */}
-        <div className="mt-20 text-center md:mt-24">
+        <div className="relative mt-20 text-center md:mt-24">
+          <div
+            aria-hidden="true"
+            className="mx-auto mb-8 h-px w-32 bg-gradient-to-r from-transparent via-gold to-transparent"
+          />
+          <p className="mb-3 font-hand text-2xl text-burgundy">a surprise is tucked inside</p>
           <button
             type="button"
             onClick={openPresent}

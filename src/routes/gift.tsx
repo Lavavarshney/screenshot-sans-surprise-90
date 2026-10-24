@@ -54,7 +54,11 @@ function GiftPage() {
   }
 
   return (
-    <div className="paper-grain anim-page-in relative min-h-screen overflow-x-clip bg-ivory">
+    <div className="paper-grain confetti-field anim-page-in relative min-h-screen overflow-x-clip bg-ivory">
+      <div
+        aria-hidden="true"
+        className="pointer-events-none absolute inset-x-0 top-0 h-40 bg-gradient-to-b from-blush/25 to-transparent"
+      />
       <Link
         to="/"
         className="absolute left-5 top-6 z-10 font-hand text-lg text-ink/70 transition hover:text-burgundy"
@@ -71,7 +75,14 @@ function GiftPage() {
           <p className="font-hand text-xl text-ink/60">watch these open for you…</p>
         ) : (
           <div className="anim-fade-rise relative mt-2 max-w-xl">
-            <Tape tone="blush" rotate={-3} className="-top-4 left-1/2 hidden -translate-x-1/2 md:block" />
+            <Tape
+              tone="blush"
+              rotate={-3}
+              className="-top-4 left-1/2 hidden -translate-x-1/2 md:block"
+            />
+            <p className="mb-3 font-body text-[10px] font-bold uppercase tracking-[0.35em] text-cherry">
+              a note from your favourite person
+            </p>
             <div
               className="relative bg-paper p-7 shadow-paper md:p-9"
               style={{ transform: "rotate(0.5deg)" }}
