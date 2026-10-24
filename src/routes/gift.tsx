@@ -2,6 +2,7 @@ import { createFileRoute, Link } from "@tanstack/react-router";
 import { useEffect, useState } from "react";
 import { scrapbook } from "@/config/scrapbook";
 import { FlowerBloom } from "@/components/scrapbook/FlowerBloom";
+import { EditablePhotoFrame } from "@/components/scrapbook/PhotoFrame";
 import { PressedFlower, Tape } from "@/components/scrapbook/decorations";
 
 export const Route = createFileRoute("/gift")({
@@ -62,6 +63,18 @@ function GiftPage() {
                 <span className="paper-flower static text-4xl">✿</span>
               </div>
             </div>
+            <section className="mt-10 w-full" aria-labelledby="photo-collage-title">
+              <p className="font-body text-[10px] font-bold uppercase tracking-[0.35em] text-cherry">your little gallery</p>
+              <h2 id="photo-collage-title" className="mt-2 font-display text-3xl font-bold text-burgundy md:text-4xl">Five pages of memories</h2>
+              <p className="mx-auto mt-2 max-w-lg font-hand text-2xl text-ink/80">Add your own photos and make this page yours.</p>
+              <div className="akanxi-photo-collage mt-7 text-left">
+                <div className="akanxi-photo-frame-1"><EditablePhotoFrame index={0} rotate={-2} variant="polaroid" /></div>
+                <div className="akanxi-photo-frame-2"><EditablePhotoFrame index={1} rotate={2.5} variant="paper" /></div>
+                <div className="akanxi-photo-frame-3"><EditablePhotoFrame index={2} rotate={1.5} variant="polaroid" /></div>
+                <div className="akanxi-photo-frame-4"><EditablePhotoFrame index={3} rotate={-1.5} variant="paper" /></div>
+                <div className="akanxi-photo-frame-5"><EditablePhotoFrame index={4} rotate={1} variant="polaroid" /></div>
+              </div>
+            </section>
             <div className="mt-8 grid w-full gap-5 sm:grid-cols-2">
               <div className="torn-paper relative bg-blush/20 p-7 shadow-paper md:p-9 sm:rotate-[-1.2deg]">
                 <p className="font-body text-[10px] font-bold uppercase tracking-[0.35em] text-cherry">one more little frame</p>
