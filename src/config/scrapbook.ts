@@ -37,7 +37,7 @@ export const scrapbook = {
 
   /** Message revealed after the flowers bloom on page two. */
   giftMessage:
-    "Before anything else: thank you for every year of being you. Now — a tiny quiz about us.",
+    "Before anything else: thank you for every year of being you. Turn the page for a little scrapbook made just for you.",
 
   /** Landing page photographs. First is the large portrait; second the landscape. */
   heroPhoto: {
