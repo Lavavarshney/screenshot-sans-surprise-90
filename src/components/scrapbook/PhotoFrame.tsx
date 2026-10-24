@@ -46,7 +46,11 @@ export function EditablePhotoFrame({
     >
       <div className="relative aspect-[4/3] overflow-hidden bg-burgundy/15">
         {src ? (
-          <img src={src} alt={`Uploaded scrapbook photo ${index + 1}`} className="block h-full w-full object-cover" />
+          <img
+            src={src}
+            alt={`Uploaded scrapbook photo ${index + 1}`}
+            className="block h-full w-full object-cover"
+          />
         ) : (
           <button
             type="button"

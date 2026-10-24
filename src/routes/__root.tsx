@@ -81,7 +81,10 @@ export const Route = createRootRouteWithContext<{ queryClient: QueryClient }>()(
       { title: "A Scrapbook for You" },
       { name: "description", content: "A handmade digital scrapbook of our favourite memories." },
       { property: "og:title", content: "A Scrapbook for You" },
-      { property: "og:description", content: "A handmade digital scrapbook of our favourite memories." },
+      {
+        property: "og:description",
+        content: "A handmade digital scrapbook of our favourite memories.",
+      },
       { property: "og:type", content: "website" },
       { name: "twitter:card", content: "summary_large_image" },
     ],
