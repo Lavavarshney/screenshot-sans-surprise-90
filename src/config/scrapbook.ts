@@ -45,14 +45,14 @@ export const scrapbook = {
     alt: "Us laughing at our usual café table",
     caption: "our table, every saturday",
     width: 1024,
-    height: 1365,
+    height: 1376,
   } as ScrapbookPhoto,
 
   supportPhoto: {
     src: photoSupport,
     alt: "Walking along the promenade at dusk",
     caption: "that walk we didn't want to end",
-    width: 1365,
+    width: 1376,
     height: 1024,
   } as ScrapbookPhoto,
 
