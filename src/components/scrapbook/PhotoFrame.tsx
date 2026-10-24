@@ -46,12 +46,12 @@ export function EditablePhotoFrame({
       className={`editable-photo-frame relative ${polaroid ? "bg-paper p-3 pb-4" : "bg-ivory p-2.5 pb-4"}`}
       style={{ transform: `rotate(${rotate}deg)` }}
     >
-      <div className="relative aspect-[4/3] overflow-hidden bg-burgundy/15">
+      <div className="relative flex aspect-[4/3] items-center justify-center overflow-hidden bg-ivory">
         {src ? (
           <img
             src={src}
             alt={`Uploaded scrapbook photo ${index + 1}`}
-            className="block h-full w-full object-cover"
+            className="block h-full w-full object-contain"
             onError={() => setSrc(null)}
           />
         ) : (
