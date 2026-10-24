@@ -39,7 +39,7 @@ function GiftPage() {
 
   if (phase === "quiz") {
     return (
-      <div className="paper-grain relative min-h-screen overflow-x-clip bg-ivory">
+      <div className="scrapbook-backdrop paper-grain relative min-h-screen overflow-x-clip">
         <Link
           to="/"
           className="absolute left-5 top-6 z-10 font-hand text-lg text-ink/70 transition hover:text-burgundy"
@@ -54,7 +54,7 @@ function GiftPage() {
   }
 
   return (
-    <div className="paper-grain confetti-field anim-page-in relative min-h-screen overflow-x-clip bg-ivory">
+    <div className="scrapbook-backdrop paper-grain confetti-field anim-page-in relative min-h-screen overflow-x-clip">
       <div
         aria-hidden="true"
         className="pointer-events-none absolute inset-x-0 top-0 h-40 bg-gradient-to-b from-blush/25 to-transparent"
@@ -84,7 +84,7 @@ function GiftPage() {
               a note from your favourite person
             </p>
             <div
-              className="relative bg-paper p-7 shadow-paper md:p-9"
+              className="torn-paper relative bg-paper p-7 shadow-paper md:p-9"
               style={{ transform: "rotate(0.5deg)" }}
             >
               <PressedFlower className="absolute -left-3 -top-3 h-8 w-8" />

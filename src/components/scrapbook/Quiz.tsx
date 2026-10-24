@@ -36,7 +36,7 @@ export function Quiz() {
 
     return (
       <div
-        className="anim-fade-rise relative w-full max-w-lg rounded-[1.5rem] border border-blush/25 bg-paper p-8 shadow-photo md:p-10"
+        className="torn-paper anim-fade-rise relative w-full max-w-lg border border-blush/25 bg-paper p-8 shadow-photo md:p-10"
         style={{ transform: "rotate(-0.5deg)" }}
       >
         <Tape tone="blush" rotate={-3} className="-top-3 left-10" />
@@ -73,7 +73,7 @@ export function Quiz() {
   if (!q) return null;
 
   return (
-    <div className="relative w-full max-w-lg rounded-[1.5rem] border border-blush/25 bg-paper p-7 shadow-photo md:p-10">
+    <div className="torn-paper relative w-full max-w-lg border border-blush/25 bg-paper p-7 shadow-photo md:p-10">
       <Tape tone="kraft" rotate={2} className="-top-3 left-1/2 -translate-x-1/2" />
 
       <div className="flex items-baseline justify-between gap-4">

@@ -61,7 +61,7 @@ function LandingPage() {
 
   return (
     <div
-      className={`paper-grain relative min-h-screen overflow-x-clip bg-ivory ${leaving ? "anim-page-out" : ""}`}
+      className={`scrapbook-backdrop paper-grain relative min-h-screen overflow-x-clip ${leaving ? "anim-page-out" : ""}`}
     >
       {/* faint graph-paper band behind the collage */}
       <div
@@ -80,7 +80,7 @@ function LandingPage() {
           <span className="h-px w-10 bg-burgundy/30" />
         </div>
         {/* ------- headline ------- */}
-        <header className="relative rounded-[2rem] border border-blush/25 bg-paper/60 px-4 py-7 text-center shadow-paper md:px-8 md:py-10">
+        <header className="torn-paper relative border border-blush/35 bg-paper/85 px-4 py-7 text-center shadow-paper md:px-8 md:py-10">
           <Tape tone="blush" rotate={-6} className="left-[6%] top-[-8px] hidden md:block" />
           <Tape tone="sage" rotate={5} className="right-[7%] top-[-6px] hidden md:block" />
           <CutoutHeadline text={`HAPPY BIRTHDAY, ${scrapbook.name.toUpperCase()}`} />
