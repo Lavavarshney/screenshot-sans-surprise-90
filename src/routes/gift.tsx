@@ -123,9 +123,12 @@ function GiftPage() {
                 <label className="mt-4 block text-left">
                   <span className="sr-only">Personalized note for Akanxi</span>
                   <textarea
-                    rows={4}
-                    placeholder="Write your personalized note here..."
-                    className="min-h-32 w-full resize-y bg-transparent font-hand text-3xl leading-9 text-burgundy outline-none placeholder:text-ink/45 focus-visible:ring-1 focus-visible:ring-burgundy"
+                    rows={5}
+                    defaultValue={`Dear Ak,
+
+From our all-nighter call before Safdarjung to our random Guruvayur Temple plan, makeup-showing calls and yesterday’s hair-colouring updates at EVERY step 😭❤️ I’m so grateful for all these little moments with you. Love you loads, my girl! 🫂❤️`}
+                    aria-label="Personalized note for Akanxi"
+                    className="min-h-40 w-full resize-y bg-transparent font-hand text-3xl leading-9 text-burgundy outline-none placeholder:text-ink/45 focus-visible:ring-1 focus-visible:ring-burgundy"
                   />
                 </label>
               </div>
