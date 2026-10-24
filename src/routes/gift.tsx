@@ -2,24 +2,23 @@ import { createFileRoute, Link } from "@tanstack/react-router";
 import { useEffect, useState, type CSSProperties } from "react";
 import { scrapbook } from "@/config/scrapbook";
 import { FlowerBloom } from "@/components/scrapbook/FlowerBloom";
-import { Quiz } from "@/components/scrapbook/Quiz";
 import { PressedFlower, Tape } from "@/components/scrapbook/decorations";
 
 export const Route = createFileRoute("/gift")({
   head: () => ({
     meta: [
-      { title: `A Little Present — Flowers & the ${scrapbook.name} Quiz` },
+      { title: `A Little Present — Akanxi's Scrapbook` },
       {
         name: "description",
-        content: "Flowers that bloom just for you, and a little best-friend quiz.",
+        content: "Flowers that bloom just for you, and a personalized scrapbook page for Akanxi.",
       },
       {
         property: "og:title",
-        content: `A Little Present — Flowers & the ${scrapbook.name} Quiz`,
+        content: `A Little Present — Akanxi's Scrapbook`,
       },
       {
         property: "og:description",
-        content: "Flowers that bloom just for you, and a little best-friend quiz.",
+        content: "Flowers that bloom just for you, and a personalized scrapbook page for Akanxi.",
       },
       { property: "og:type", content: "website" },
       { name: "twitter:card", content: "summary_large_image" },
@@ -29,7 +28,7 @@ export const Route = createFileRoute("/gift")({
 });
 
 function GiftPage() {
-  const [phase, setPhase] = useState<"blooming" | "message" | "quiz">("blooming");
+  const [phase, setPhase] = useState<"blooming" | "message" | "note">("blooming");
 
   useEffect(() => {
     const reduced = window.matchMedia("(prefers-reduced-motion: reduce)").matches;
@@ -37,7 +36,7 @@ function GiftPage() {
     return () => window.clearTimeout(t);
   }, []);
 
-  if (phase === "quiz") {
+  if (phase === "note") {
     return (
       <div className="scrapbook-backdrop paper-grain relative min-h-screen overflow-x-clip">
         <Link
@@ -46,8 +45,28 @@ function GiftPage() {
         >
           ← back to the cover
         </Link>
-        <section className="mx-auto flex min-h-screen max-w-3xl flex-col items-center justify-center px-5 py-16">
-          <Quiz />
+        <section className="mx-auto flex min-h-screen max-w-3xl flex-col items-center justify-center px-5 py-20">
+          <div className="relative w-full max-w-2xl">
+            <div className="css-bow bow-note-left" aria-hidden="true" />
+            <div className="torn-paper relative bg-paper p-8 text-center shadow-photo md:p-12" style={{ transform: "rotate(-1deg)" }}>
+              <Tape tone="blush" rotate={-4} className="-top-4 left-12" />
+              <Tape tone="kraft" rotate={3} className="-top-4 right-12" />
+              <p className="font-body text-[10px] font-bold uppercase tracking-[0.4em] text-cherry">a page made just for you</p>
+              <h1 className="mt-4 font-display text-5xl font-bold text-burgundy md:text-6xl">Akanxi&apos;s Scrapbook</h1>
+              <p className="mx-auto mt-6 max-w-xl font-hand text-3xl leading-10 text-ink md:text-4xl">
+                To my favourite person — I made you this little book of us. Every page is a tiny reminder of how loved you are.
+              </p>
+              <div className="mt-8 flex justify-center gap-4" aria-hidden="true">
+                <span className="paper-flower static text-4xl">✿</span>
+                <span className="text-4xl text-cherry">♥</span>
+                <span className="paper-flower static text-4xl">✿</span>
+              </div>
+            </div>
+            <div className="torn-paper relative mx-auto mt-8 max-w-xl bg-blush/20 p-7 shadow-paper md:p-9" style={{ transform: "rotate(1.2deg)" }}>
+              <p className="font-body text-[10px] font-bold uppercase tracking-[0.35em] text-cherry">one more little frame</p>
+              <p className="mt-3 font-hand text-3xl leading-9 text-ink">Thank you for making ordinary days feel like celebrations. I hope this scrapbook makes you smile as much as you make me smile.</p>
+            </div>
+          </div>
         </section>
       </div>
     );
@@ -70,16 +89,18 @@ function GiftPage() {
         aria-hidden="true"
         className="reveal-confetti pointer-events-none absolute inset-0 overflow-hidden"
       >
-        {Array.from({ length: 34 }, (_, i) => (
-          <span key={i} style={{ "--i": i } as CSSProperties} />
-        ))}
+        <div className="confetti-burst-origin" aria-hidden="true">
+          {Array.from({ length: 34 }, (_, i) => (
+            <span key={i} style={{ "--i": i } as CSSProperties} />
+          ))}
+        </div>
       </div>
       <main className="mx-auto flex min-h-screen max-w-3xl flex-col items-center justify-center px-5 py-14 text-center">
         <div className="relative w-full">
+          <FlowerBloom className="h-[42vh] w-full max-w-2xl md:h-[46vh]" />
           <div className="cake-pop" aria-hidden="true">
             <span>♥</span>
           </div>
-          <FlowerBloom className="h-[42vh] w-full max-w-2xl md:h-[46vh]" />
         </div>
 
         {phase === "blooming" ? (
@@ -104,10 +125,10 @@ function GiftPage() {
               </p>
               <button
                 type="button"
-                onClick={() => setPhase("quiz")}
+                onClick={() => setPhase("note")}
                 className="mt-7 rounded-full border border-burgundy/30 bg-ivory px-8 py-3 font-display text-sm uppercase tracking-[0.3em] text-burgundy shadow-paper transition hover:-translate-y-0.5 hover:bg-blush/10"
               >
-                Start the quiz
+                Turn the page
               </button>
             </div>
           </div>
