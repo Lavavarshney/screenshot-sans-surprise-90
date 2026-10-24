@@ -1,5 +1,5 @@
 import { createFileRoute, Link } from "@tanstack/react-router";
-import { useEffect, useState } from "react";
+import { useEffect, useState, type CSSProperties } from "react";
 import { scrapbook } from "@/config/scrapbook";
 import { FlowerBloom } from "@/components/scrapbook/FlowerBloom";
 import { Quiz } from "@/components/scrapbook/Quiz";
@@ -33,13 +33,13 @@ function GiftPage() {
 
   useEffect(() => {
     const reduced = window.matchMedia("(prefers-reduced-motion: reduce)").matches;
-    const t = window.setTimeout(() => setPhase("message"), reduced ? 400 : 3400);
+    const t = window.setTimeout(() => setPhase("message"), reduced ? 250 : 1450);
     return () => window.clearTimeout(t);
   }, []);
 
   if (phase === "quiz") {
     return (
-      <div className="paper-grain relative min-h-screen overflow-x-clip bg-ivory">
+      <div className="scrapbook-backdrop paper-grain relative min-h-screen overflow-x-clip">
         <Link
           to="/"
           className="absolute left-5 top-6 z-10 font-hand text-lg text-ink/70 transition hover:text-burgundy"
@@ -54,7 +54,11 @@ function GiftPage() {
   }
 
   return (
-    <div className="paper-grain anim-page-in relative min-h-screen overflow-x-clip bg-ivory">
+    <div className="scrapbook-backdrop paper-grain confetti-field anim-page-in relative min-h-screen overflow-x-clip">
+      <div
+        aria-hidden="true"
+        className="pointer-events-none absolute inset-x-0 top-0 h-40 bg-gradient-to-b from-blush/25 to-transparent"
+      />
       <Link
         to="/"
         className="absolute left-5 top-6 z-10 font-hand text-lg text-ink/70 transition hover:text-burgundy"
@@ -62,8 +66,19 @@ function GiftPage() {
         ← back to the cover
       </Link>
 
+      <div
+        aria-hidden="true"
+        className="reveal-confetti pointer-events-none absolute inset-0 overflow-hidden"
+      >
+        {Array.from({ length: 34 }, (_, i) => (
+          <span key={i} style={{ "--i": i } as CSSProperties} />
+        ))}
+      </div>
       <main className="mx-auto flex min-h-screen max-w-3xl flex-col items-center justify-center px-5 py-14 text-center">
         <div className="relative w-full">
+          <div className="cake-pop" aria-hidden="true">
+            <span>♥</span>
+          </div>
           <FlowerBloom className="h-[42vh] w-full max-w-2xl md:h-[46vh]" />
         </div>
 
@@ -71,9 +86,16 @@ function GiftPage() {
           <p className="font-hand text-xl text-ink/60">watch these open for you…</p>
         ) : (
           <div className="anim-fade-rise relative mt-2 max-w-xl">
-            <Tape tone="blush" rotate={-3} className="-top-4 left-1/2 hidden -translate-x-1/2 md:block" />
+            <Tape
+              tone="blush"
+              rotate={-3}
+              className="-top-4 left-1/2 hidden -translate-x-1/2 md:block"
+            />
+            <p className="mb-3 font-body text-[10px] font-bold uppercase tracking-[0.35em] text-cherry">
+              a note from your favourite person
+            </p>
             <div
-              className="relative bg-paper p-7 shadow-paper md:p-9"
+              className="torn-paper relative bg-paper p-7 shadow-paper md:p-9"
               style={{ transform: "rotate(0.5deg)" }}
             >
               <PressedFlower className="absolute -left-3 -top-3 h-8 w-8" />

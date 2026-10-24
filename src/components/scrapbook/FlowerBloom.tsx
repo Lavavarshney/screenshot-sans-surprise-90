@@ -10,18 +10,18 @@ type BloomSpec = {
 };
 
 const FLOWERS: BloomSpec[] = [
-  { x: 150, y: 190, size: 46, delay: 1.0, petal: "var(--blush)", center: "var(--burgundy)" },
-  { x: 300, y: 112, size: 56, delay: 1.35, petal: "var(--blush)", center: "var(--kraft)" },
+  { x: 150, y: 190, size: 46, delay: 0.05, petal: "var(--blush)", center: "var(--burgundy)" },
+  { x: 300, y: 112, size: 56, delay: 0.17, petal: "var(--blush)", center: "var(--kraft)" },
   {
     x: 445,
     y: 205,
     size: 40,
-    delay: 1.65,
+    delay: 0.29,
     petal: "color-mix(in oklab, var(--blush) 60%, var(--paper))",
     center: "var(--burgundy)",
   },
-  { x: 520, y: 288, size: 25, delay: 1.95, petal: "var(--sage)", center: "var(--kraft)" },
-  { x: 78, y: 288, size: 25, delay: 2.15, petal: "var(--blush)", center: "var(--kraft)" },
+  { x: 520, y: 288, size: 25, delay: 0.41, petal: "var(--sage)", center: "var(--kraft)" },
+  { x: 78, y: 288, size: 25, delay: 0.53, petal: "var(--blush)", center: "var(--kraft)" },
 ];
 
 const SPARKLE_PATH = "M0 -6 L1.3 -1.3 L6 0 L1.3 1.3 L0 6 L-1.3 1.3 L-6 0 L-1.3 -1.3 Z";
@@ -97,7 +97,12 @@ export function FlowerBloom({ className = "" }: { className?: string }) {
           strokeLinecap="round"
           pathLength={1}
           className="anim-stem"
-          style={{ "--stem-length": 1, animationDelay: `${Math.max(0, f.delay - 0.9)}s` } as CSSProperties}
+          style={
+            {
+              "--stem-length": 1,
+              animationDelay: `${Math.max(0, f.delay - 0.9)}s`,
+            } as CSSProperties
+          }
         />
       ))}
 

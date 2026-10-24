@@ -20,7 +20,7 @@ export function CutoutHeadline({ text }: { text: string }) {
   return (
     <h1
       aria-label={text}
-      className="flex flex-wrap items-center justify-center gap-x-4 gap-y-3 font-display text-2xl font-semibold uppercase leading-none md:text-5xl"
+      className="flex flex-wrap items-center justify-center gap-x-4 gap-y-3 font-display text-3xl font-black uppercase leading-[0.92] tracking-tight md:text-6xl [&>span>span]:[-webkit-text-stroke:1.25px_currentColor]"
     >
       {words.map((word, wi) => (
         <span key={wi} aria-hidden="true" className="flex gap-1">

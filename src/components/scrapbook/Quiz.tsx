@@ -35,7 +35,10 @@ export function Quiz() {
             : r.tryAgain;
 
     return (
-      <div className="anim-fade-rise relative w-full max-w-lg bg-paper p-8 shadow-paper md:p-10" style={{ transform: "rotate(-0.5deg)" }}>
+      <div
+        className="torn-paper anim-fade-rise relative w-full max-w-lg border border-blush/25 bg-paper p-8 shadow-photo md:p-10"
+        style={{ transform: "rotate(-0.5deg)" }}
+      >
         <Tape tone="blush" rotate={-3} className="-top-3 left-10" />
         <Tape tone="kraft" rotate={2.5} className="-top-3 right-10" />
         <div className="text-center">
@@ -44,9 +47,7 @@ export function Quiz() {
             <PressedFlower className="h-10 w-10" />
             <PressedFlower className="h-7 w-7" />
           </div>
-          <h2 className="mt-4 font-display text-3xl font-semibold text-burgundy">
-            {result.title}
-          </h2>
+          <h2 className="mt-4 font-display text-3xl font-semibold text-burgundy">{result.title}</h2>
           <p className="mt-3 font-hand text-2xl text-ink">{result.note}</p>
           <p className="mt-2 font-body text-sm uppercase tracking-[0.25em] text-muted-foreground">
             {score} / {questions.length}
@@ -72,7 +73,7 @@ export function Quiz() {
   if (!q) return null;
 
   return (
-    <div className="relative w-full max-w-lg bg-paper p-7 shadow-paper md:p-10">
+    <div className="torn-paper relative w-full max-w-lg border border-blush/25 bg-paper p-7 shadow-photo md:p-10">
       <Tape tone="kraft" rotate={2} className="-top-3 left-1/2 -translate-x-1/2" />
 
       <div className="flex items-baseline justify-between gap-4">
@@ -107,7 +108,7 @@ export function Quiz() {
               type="button"
               onClick={() => answer(i)}
               disabled={revealed}
-              className={`rounded-md border px-5 py-3.5 text-left font-body text-[15px] transition ${
+              className={`rounded-xl border px-5 py-3.5 text-left font-body text-[15px] transition ${
                 revealed && isCorrect
                   ? "border-sage bg-sage/15 text-charcoal"
                   : isChosen
