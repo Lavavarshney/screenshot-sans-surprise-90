@@ -63,9 +63,33 @@ export function Sprig({ className = "" }: { className?: string }) {
         strokeWidth="2.5"
         strokeLinecap="round"
       />
-      <ellipse cx="22" cy="46" rx="9" ry="4" fill="var(--sage)" opacity="0.8" transform="rotate(-32 22 46)" />
-      <ellipse cx="40" cy="30" rx="9" ry="4" fill="var(--sage)" opacity="0.65" transform="rotate(30 40 30)" />
-      <ellipse cx="24" cy="66" rx="8" ry="3.5" fill="var(--sage)" opacity="0.7" transform="rotate(-28 24 66)" />
+      <ellipse
+        cx="22"
+        cy="46"
+        rx="9"
+        ry="4"
+        fill="var(--sage)"
+        opacity="0.8"
+        transform="rotate(-32 22 46)"
+      />
+      <ellipse
+        cx="40"
+        cy="30"
+        rx="9"
+        ry="4"
+        fill="var(--sage)"
+        opacity="0.65"
+        transform="rotate(30 40 30)"
+      />
+      <ellipse
+        cx="24"
+        cy="66"
+        rx="8"
+        ry="3.5"
+        fill="var(--sage)"
+        opacity="0.7"
+        transform="rotate(-28 24 66)"
+      />
     </svg>
   );
 }
@@ -88,7 +112,10 @@ export function DoodleHeart({ className = "" }: { className?: string }) {
 export function DoodleStar({ className = "" }: { className?: string }) {
   return (
     <svg viewBox="-8 -8 16 16" className={className} aria-hidden="true">
-      <path d="M0 -7 L1.6 -1.6 L7 0 L1.6 1.6 L0 7 L-1.6 1.6 L-7 0 L-1.6 -1.6 Z" fill="currentColor" />
+      <path
+        d="M0 -7 L1.6 -1.6 L7 0 L1.6 1.6 L0 7 L-1.6 1.6 L-7 0 L-1.6 -1.6 Z"
+        fill="currentColor"
+      />
     </svg>
   );
 }

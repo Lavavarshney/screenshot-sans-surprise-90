@@ -6,7 +6,7 @@
 //  update captions below. Nothing else needs to change.
 // =====================================================================
 
-import photoHero from "@/assets/photo-hero.jpg";
+import photoHero from "@/assets/hero.png";
 import photoSupport from "@/assets/photo-support.jpg";
 import photoPolaroidA from "@/assets/photo-polaroid-a.jpg";
 import photoPolaroidB from "@/assets/photo-polaroid-b.jpg";

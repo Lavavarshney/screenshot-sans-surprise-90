@@ -95,13 +95,35 @@ function LandingPage() {
         <span className="paper-flower flower-two">✿</span>
         <span className="paper-flower flower-three">✦</span>
         <span className="paper-flower flower-four">✿</span>
-        <span className="candyfloss candyfloss-left" aria-hidden="true"><i /><b /><em /></span>
-        <span className="candyfloss candyfloss-right" aria-hidden="true"><i /><b /><em /></span>
-        <span className="sticker sticker-star sticker-three">SPECIAL<br />DAY</span>
-        <span className="sticker sticker-heart sticker-four">LOVE<br />YOU</span>
-        <span className="bottom-flower bottom-flower-one" aria-hidden="true">✿</span>
-        <span className="bottom-flower bottom-flower-two" aria-hidden="true">✾</span>
-        <span className="bottom-flower bottom-flower-three" aria-hidden="true">✿</span>
+        <span className="candyfloss candyfloss-left" aria-hidden="true">
+          <i />
+          <b />
+          <em />
+        </span>
+        <span className="candyfloss candyfloss-right" aria-hidden="true">
+          <i />
+          <b />
+          <em />
+        </span>
+        <span className="sticker sticker-star sticker-three">
+          SPECIAL
+          <br />
+          DAY
+        </span>
+        <span className="sticker sticker-heart sticker-four">
+          LOVE
+          <br />
+          YOU
+        </span>
+        <span className="bottom-flower bottom-flower-one" aria-hidden="true">
+          ✿
+        </span>
+        <span className="bottom-flower bottom-flower-two" aria-hidden="true">
+          ✾
+        </span>
+        <span className="bottom-flower bottom-flower-three" aria-hidden="true">
+          ✿
+        </span>
       </div>
       <main className="relative mx-auto max-w-7xl px-4 pb-24 pt-5 md:px-8 md:pt-8">
         <div className="mb-8 flex items-center justify-center gap-3 font-body text-[10px] font-bold uppercase tracking-[0.35em] text-burgundy/75">
