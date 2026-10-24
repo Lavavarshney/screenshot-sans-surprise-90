@@ -7,9 +7,9 @@
 // =====================================================================
 
 import photoHero from "@/assets/image.png";
-import photoSupport from "@/assets/photo-support.jpg";
+import photoSupport from "@/assets/support-image.jpeg";
 import photoPolaroidA from "@/assets/photo-polaroid-a.jpg";
-import photoPolaroidB from "@/assets/photo-polaroid-b.jpg";
+import photoPolaroidB from "@/assets/drunk.jpeg";
 
 export type ScrapbookPhoto = {
   src: string;
@@ -42,16 +42,16 @@ export const scrapbook = {
   /** Landing page photographs. First is the large portrait; second the landscape. */
   heroPhoto: {
     src: photoHero,
-    alt: "Us laughing at our usual café table",
-    caption: "our table, every saturday",
+    alt: "Us laughing",
+    caption: "Saree Paglus",
     width: 1024,
     height: 1376,
   } as ScrapbookPhoto,
 
   supportPhoto: {
     src: photoSupport,
-    alt: "Walking along the promenade at dusk",
-    caption: "that walk we didn't want to end",
+    alt: "Walking",
+    caption: "that metro wali 1 hr ki convo",
     width: 1376,
     height: 1024,
   } as ScrapbookPhoto,
@@ -67,8 +67,8 @@ export const scrapbook = {
     },
     {
       src: photoPolaroidB,
-      alt: "Picnic blanket with a book, dried flowers and a camera",
-      caption: "the picnic era",
+      alt: "Picnic",
+      caption: "the first drink",
       width: 1024,
       height: 1024,
     },
