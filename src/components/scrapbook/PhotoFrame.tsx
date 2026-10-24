@@ -21,6 +21,7 @@ export function EditablePhotoFrame({
   index,
   rotate = 0,
   variant = "polaroid",
+  initialSrc,
 }: {
   index: number;
   rotate?: number;
