@@ -1,5 +1,5 @@
 import { createFileRoute, Link } from "@tanstack/react-router";
-import { useEffect, useState } from "react";
+import { useEffect, useState, type CSSProperties } from "react";
 import { scrapbook } from "@/config/scrapbook";
 import { FlowerBloom } from "@/components/scrapbook/FlowerBloom";
 import { Quiz } from "@/components/scrapbook/Quiz";
@@ -33,7 +33,7 @@ function GiftPage() {
 
   useEffect(() => {
     const reduced = window.matchMedia("(prefers-reduced-motion: reduce)").matches;
-    const t = window.setTimeout(() => setPhase("message"), reduced ? 400 : 3400);
+    const t = window.setTimeout(() => setPhase("message"), reduced ? 250 : 1450);
     return () => window.clearTimeout(t);
   }, []);
 
@@ -66,8 +66,19 @@ function GiftPage() {
         ← back to the cover
       </Link>
 
+      <div
+        aria-hidden="true"
+        className="reveal-confetti pointer-events-none absolute inset-0 overflow-hidden"
+      >
+        {Array.from({ length: 34 }, (_, i) => (
+          <span key={i} style={{ "--i": i } as CSSProperties} />
+        ))}
+      </div>
       <main className="mx-auto flex min-h-screen max-w-3xl flex-col items-center justify-center px-5 py-14 text-center">
         <div className="relative w-full">
+          <div className="cake-pop" aria-hidden="true">
+            <span>♥</span>
+          </div>
           <FlowerBloom className="h-[42vh] w-full max-w-2xl md:h-[46vh]" />
         </div>
 

@@ -139,13 +139,54 @@
 @utility scrapbook-backdrop {
   background-color: var(--ivory);
   background-image:
-    radial-gradient(circle at 15% 10%, color-mix(in oklab, var(--paper) 78%, transparent) 0 20%, transparent 48%),
-    radial-gradient(circle at 85% 72%, color-mix(in oklab, var(--burgundy) 18%, transparent) 0 17%, transparent 48%),
-    linear-gradient(135deg, color-mix(in oklab, var(--burgundy) 7%, transparent), transparent 38%, color-mix(in oklab, var(--blush) 12%, transparent));
+    radial-gradient(
+      circle at 15% 10%,
+      color-mix(in oklab, var(--paper) 78%, transparent) 0 20%,
+      transparent 48%
+    ),
+    radial-gradient(
+      circle at 85% 72%,
+      color-mix(in oklab, var(--burgundy) 18%, transparent) 0 17%,
+      transparent 48%
+    ),
+    linear-gradient(
+      135deg,
+      color-mix(in oklab, var(--burgundy) 7%, transparent),
+      transparent 38%,
+      color-mix(in oklab, var(--blush) 12%, transparent)
+    );
 }
 
 @utility torn-paper {
-  clip-path: polygon(0.5% 2%, 5% 1%, 10% 2%, 16% 0.5%, 22% 2%, 29% 1%, 37% 2%, 45% 0.5%, 54% 2%, 63% 1%, 71% 2%, 80% 0.5%, 89% 2%, 99% 1%, 98% 97%, 91% 98%, 84% 96.5%, 76% 98%, 68% 97%, 59% 98.5%, 50% 97%, 42% 98%, 34% 97%, 25% 98.5%, 17% 97%, 8% 98%, 1% 96%);
+  clip-path: polygon(
+    0.5% 2%,
+    5% 1%,
+    10% 2%,
+    16% 0.5%,
+    22% 2%,
+    29% 1%,
+    37% 2%,
+    45% 0.5%,
+    54% 2%,
+    63% 1%,
+    71% 2%,
+    80% 0.5%,
+    89% 2%,
+    99% 1%,
+    98% 97%,
+    91% 98%,
+    84% 96.5%,
+    76% 98%,
+    68% 97%,
+    59% 98.5%,
+    50% 97%,
+    42% 98%,
+    34% 97%,
+    25% 98.5%,
+    17% 97%,
+    8% 98%,
+    1% 96%
+  );
 }
 
 @utility confetti-field {
@@ -203,21 +244,271 @@
 }
 
 /* ---------- Maximalist birthday collage ---------- */
-.birthday-header { background-image: linear-gradient(90deg, transparent 0 8%, color-mix(in oklab, var(--blush) 11%, transparent) 8% 9%, transparent 9% 100%), repeating-linear-gradient(0deg, transparent 0 34px, color-mix(in oklab, var(--kraft) 28%, transparent) 35px); }
-.scrapbook-edge-decor { z-index: 0; }
-.css-bow { position:absolute; width:72px; height:46px; background:var(--cherry); border:3px solid color-mix(in oklab,var(--burgundy) 70%,black); filter:drop-shadow(3px 5px 0 color-mix(in oklab,var(--burgundy) 25%,transparent)); transform:rotate(-18deg); }
-.css-bow::before,.css-bow::after { content:""; position:absolute; top:-4px; width:42px; height:38px; background:var(--blush); border:3px solid var(--burgundy); border-radius:70% 18% 65% 20%; }
-.css-bow::before { left:-31px; transform:rotate(24deg); }.css-bow::after { right:-31px; transform:scaleX(-1) rotate(24deg); }
-.bow-top-left { top:54px; left:2%; }.bow-top-right { top:110px; right:3%; transform:rotate(18deg) scale(.86); background:var(--burgundy); }
-.lace-strip { position:absolute; width:190px; height:24px; border-top:3px dotted var(--paper); border-bottom:3px dotted var(--paper); background:repeating-radial-gradient(circle at 10px 0,var(--blush) 0 8px,transparent 9px 18px); opacity:.75; }
-.lace-left { top:43%; left:-65px; transform:rotate(90deg); }.lace-right { top:62%; right:-65px; transform:rotate(90deg); }
-.sticker { position:absolute; z-index:2; display:grid; place-items:center; width:86px; height:70px; background:var(--paper); color:var(--burgundy); border:3px solid var(--cherry); border-radius:45% 55% 40% 60%; font-family:var(--font-hand); font-size:18px; line-height:.85; text-align:center; transform:rotate(-12deg); box-shadow:3px 4px 0 color-mix(in oklab,var(--blush) 45%,transparent); }.sticker-two { transform:rotate(13deg); }.sticker-one { top:31%; left:2%; }.sticker-two { top:76%; right:2%; }
-.paper-flower { position:absolute; color:var(--cherry); font-size:52px; text-shadow:2px 2px 0 var(--paper); }.flower-one{top:22%;left:4%}.flower-two{top:49%;right:4%;color:var(--burgundy)}.flower-three{bottom:8%;left:7%;font-size:38px}.flower-four{bottom:24%;right:8%;font-size:42px;color:var(--gold)}
-.birthday-collage::before,.birthday-collage::after { content:""; position:absolute; z-index:-1; background:var(--blush); opacity:.2; width:150px; height:55px; transform:rotate(-8deg); }.birthday-collage::before{top:9%;left:40%}.birthday-collage::after{bottom:8%;right:31%;transform:rotate(7deg);}
-.collage-label,.scrap-note { position:absolute; z-index:3; font-family:var(--font-hand); color:var(--burgundy); }.collage-label { background:var(--paper); padding:5px 14px; font-size:20px; border:1px solid var(--blush); box-shadow:2px 3px 0 color-mix(in oklab,var(--blush) 35%,transparent); }.label-portrait{top:4%;right:7%;transform:rotate(5deg)}.label-note{top:1%;left:4%;transform:rotate(-8deg)}.label-snapshot{top:-4%;left:41%;transform:rotate(-4deg)}
-.scrap-note { padding:10px; background:color-mix(in oklab,var(--paper) 90%,transparent); font-size:21px; line-height:1; text-align:center; border-bottom:3px solid var(--cherry); }.scrap-note-left{left:2%;bottom:13%;transform:rotate(-9deg)}.scrap-note-right{right:2%;bottom:4%;transform:rotate(8deg)}
-.ribbon-tail { position:absolute; width:24px; height:110px; background:var(--burgundy); clip-path:polygon(0 0,100% 0,82% 100%,50% 82%,18% 100%); transform:rotate(22deg); }.ribbon-tail-one{top:0;left:14%}
-.mini-cake { position:absolute; right:3%; top:27%; width:42px; height:32px; border-radius:5px 5px 14px 14px; background:var(--paper); border:3px solid var(--cherry); transform:rotate(9deg); }.mini-cake::before{content:"";position:absolute;left:17px;top:-17px;width:4px;height:16px;background:var(--gold)}.mini-cake::after{content:"";position:absolute;left:13px;top:-23px;width:12px;height:12px;border-radius:50%;background:var(--cherry)}
+.birthday-header {
+  background-image:
+    linear-gradient(
+      90deg,
+      transparent 0 8%,
+      color-mix(in oklab, var(--blush) 11%, transparent) 8% 9%,
+      transparent 9% 100%
+    ),
+    repeating-linear-gradient(
+      0deg,
+      transparent 0 34px,
+      color-mix(in oklab, var(--kraft) 28%, transparent) 35px
+    );
+}
+.scrapbook-edge-decor {
+  z-index: 0;
+}
+.css-bow {
+  position: absolute;
+  width: 72px;
+  height: 46px;
+  background: var(--cherry);
+  border: 3px solid color-mix(in oklab, var(--burgundy) 70%, black);
+  filter: drop-shadow(3px 5px 0 color-mix(in oklab, var(--burgundy) 25%, transparent));
+  transform: rotate(-18deg);
+}
+.css-bow::before,
+.css-bow::after {
+  content: "";
+  position: absolute;
+  top: -4px;
+  width: 42px;
+  height: 38px;
+  background: var(--blush);
+  border: 3px solid var(--burgundy);
+  border-radius: 70% 18% 65% 20%;
+}
+.css-bow::before {
+  left: -31px;
+  transform: rotate(24deg);
+}
+.css-bow::after {
+  right: -31px;
+  transform: scaleX(-1) rotate(24deg);
+}
+.bow-top-left {
+  top: 54px;
+  left: 2%;
+}
+.bow-top-right {
+  top: 110px;
+  right: 3%;
+  transform: rotate(18deg) scale(0.86);
+  background: var(--burgundy);
+}
+.lace-strip {
+  position: absolute;
+  width: 190px;
+  height: 24px;
+  border-top: 3px dotted var(--paper);
+  border-bottom: 3px dotted var(--paper);
+  background: repeating-radial-gradient(circle at 10px 0, var(--blush) 0 8px, transparent 9px 18px);
+  opacity: 0.75;
+}
+.lace-left {
+  top: 43%;
+  left: -65px;
+  transform: rotate(90deg);
+}
+.lace-right {
+  top: 62%;
+  right: -65px;
+  transform: rotate(90deg);
+}
+.sticker {
+  position: absolute;
+  z-index: 2;
+  display: grid;
+  place-items: center;
+  width: 86px;
+  height: 70px;
+  background: var(--paper);
+  color: var(--burgundy);
+  border: 3px solid var(--cherry);
+  border-radius: 45% 55% 40% 60%;
+  font-family: var(--font-hand);
+  font-size: 18px;
+  line-height: 0.85;
+  text-align: center;
+  transform: rotate(-12deg);
+  box-shadow: 3px 4px 0 color-mix(in oklab, var(--blush) 45%, transparent);
+}
+.sticker-two {
+  transform: rotate(13deg);
+}
+.sticker-one {
+  top: 31%;
+  left: 2%;
+}
+.sticker-two {
+  top: 76%;
+  right: 2%;
+}
+.paper-flower {
+  position: absolute;
+  color: var(--cherry);
+  font-size: 52px;
+  text-shadow: 2px 2px 0 var(--paper);
+}
+.flower-one {
+  top: 22%;
+  left: 4%;
+}
+.flower-two {
+  top: 49%;
+  right: 4%;
+  color: var(--burgundy);
+}
+.flower-three {
+  bottom: 8%;
+  left: 7%;
+  font-size: 38px;
+}
+.flower-four {
+  bottom: 24%;
+  right: 8%;
+  font-size: 42px;
+  color: var(--gold);
+}
+.birthday-collage::before,
+.birthday-collage::after {
+  content: "";
+  position: absolute;
+  z-index: -1;
+  background: var(--blush);
+  opacity: 0.2;
+  width: 150px;
+  height: 55px;
+  transform: rotate(-8deg);
+}
+.birthday-collage::before {
+  top: 9%;
+  left: 40%;
+}
+.birthday-collage::after {
+  bottom: 8%;
+  right: 31%;
+  transform: rotate(7deg);
+}
+.collage-label,
+.scrap-note {
+  position: absolute;
+  z-index: 3;
+  font-family: var(--font-hand);
+  color: var(--burgundy);
+}
+.collage-label {
+  background: var(--paper);
+  padding: 5px 14px;
+  font-size: 20px;
+  border: 1px solid var(--blush);
+  box-shadow: 2px 3px 0 color-mix(in oklab, var(--blush) 35%, transparent);
+}
+.label-portrait {
+  top: 4%;
+  right: 7%;
+  transform: rotate(5deg);
+}
+.label-note {
+  top: 1%;
+  left: 4%;
+  transform: rotate(-8deg);
+}
+.label-snapshot {
+  top: -4%;
+  left: 41%;
+  transform: rotate(-4deg);
+}
+.scrap-note {
+  padding: 10px;
+  background: color-mix(in oklab, var(--paper) 90%, transparent);
+  font-size: 21px;
+  line-height: 1;
+  text-align: center;
+  border-bottom: 3px solid var(--cherry);
+}
+.scrap-note-left {
+  left: 2%;
+  bottom: 13%;
+  transform: rotate(-9deg);
+}
+.scrap-note-right {
+  right: 2%;
+  bottom: 4%;
+  transform: rotate(8deg);
+}
+.ribbon-tail {
+  position: absolute;
+  width: 24px;
+  height: 110px;
+  background: var(--burgundy);
+  clip-path: polygon(0 0, 100% 0, 82% 100%, 50% 82%, 18% 100%);
+  transform: rotate(22deg);
+}
+.ribbon-tail-one {
+  top: 0;
+  left: 14%;
+}
+.collage-ribbon-word {
+  position: absolute;
+  left: 7%;
+  top: 18%;
+  font-family: var(--font-hand);
+  font-size: 22px;
+  color: var(--burgundy);
+  transform: rotate(-8deg);
+  border-bottom: 3px solid var(--cherry);
+}
+.collage-stamp {
+  position: absolute;
+  right: 8%;
+  top: 28%;
+  display: grid;
+  place-items: center;
+  width: 62px;
+  height: 62px;
+  border: 2px dashed var(--burgundy);
+  border-radius: 50%;
+  font-family: var(--font-hand);
+  font-size: 14px;
+  line-height: 0.82;
+  text-align: center;
+  color: var(--burgundy);
+  transform: rotate(12deg);
+}
+.mini-cake {
+  position: absolute;
+  right: 3%;
+  top: 27%;
+  width: 42px;
+  height: 32px;
+  border-radius: 5px 5px 14px 14px;
+  background: var(--paper);
+  border: 3px solid var(--cherry);
+  transform: rotate(9deg);
+}
+.mini-cake::before {
+  content: "";
+  position: absolute;
+  left: 17px;
+  top: -17px;
+  width: 4px;
+  height: 16px;
+  background: var(--gold);
+}
+.mini-cake::after {
+  content: "";
+  position: absolute;
+  left: 13px;
+  top: -23px;
+  width: 12px;
+  height: 12px;
+  border-radius: 50%;
+  background: var(--cherry);
+}
 
 /* ---------- Soft shadows ---------- */
 
@@ -327,7 +618,7 @@
 }
 
 @utility anim-bloom {
-  animation: petal-bloom 1.1s cubic-bezier(0.34, 1.4, 0.5, 1) both;
+  animation: petal-bloom 0.5s cubic-bezier(0.34, 1.4, 0.5, 1) both;
   transform-origin: 50% 100%;
 }
 
@@ -343,10 +634,155 @@
   animation: gentle-sway 5s ease-in-out infinite;
 }
 
+@keyframes cake-pop {
+  0% {
+    opacity: 0;
+    transform: translate(-50%, 20px) scale(0.35) rotate(-12deg);
+  }
+  65% {
+    opacity: 1;
+    transform: translate(-50%, -8px) scale(1.12) rotate(4deg);
+  }
+  100% {
+    opacity: 1;
+    transform: translate(-50%, 0) scale(1) rotate(0);
+  }
+}
+.cake-pop {
+  position: absolute;
+  left: 50%;
+  top: 8%;
+  z-index: 2;
+  width: 86px;
+  height: 54px;
+  border: 4px solid var(--burgundy);
+  border-radius: 12px 12px 22px 22px;
+  background: linear-gradient(var(--blush) 0 44%, var(--paper) 44%);
+  animation: cake-pop 0.5s cubic-bezier(0.2, 1.4, 0.4, 1) 0.12s both;
+}
+.cake-pop::before {
+  content: "";
+  position: absolute;
+  left: 12px;
+  right: 12px;
+  top: -12px;
+  height: 15px;
+  border-radius: 50%;
+  background: var(--cherry);
+  border: 3px solid var(--burgundy);
+}
+.cake-pop::after {
+  content: "✦  ✦  ✦";
+  position: absolute;
+  left: 50%;
+  top: -39px;
+  transform: translateX(-50%);
+  font-size: 18px;
+  color: var(--gold);
+  white-space: nowrap;
+}
+.cake-pop span {
+  position: absolute;
+  left: 50%;
+  top: 13px;
+  transform: translateX(-50%);
+  font-family: var(--font-hand);
+  font-size: 23px;
+  color: var(--burgundy);
+}
+@keyframes confetti-shower {
+  0% {
+    opacity: 0;
+    transform: translate3d(0, -12vh, 0) rotate(0);
+  }
+  12% {
+    opacity: 1;
+  }
+  100% {
+    opacity: 0.9;
+    transform: translate3d(calc((var(--i) * 17px) - 280px), 110vh, 0) rotate(calc(var(--i) * 83deg));
+  }
+}
+.reveal-confetti span {
+  position: absolute;
+  left: calc((var(--i) * 29) % 100 * 1%);
+  top: -12px;
+  width: 8px;
+  height: 14px;
+  background: var(--cherry);
+  border-radius: 2px;
+  animation: confetti-shower calc(1.1s + (var(--i) % 7) * 0.12s) cubic-bezier(0.2, 0.7, 0.3, 1)
+    calc(var(--i) * 12ms) both;
+}
+.reveal-confetti span:nth-child(2n) {
+  width: 6px;
+  height: 11px;
+}
+.reveal-confetti span:nth-child(3n) {
+  background: var(--gold);
+  width: 10px;
+  height: 17px;
+}
+.reveal-confetti span:nth-child(4n) {
+  background: var(--sage);
+}
+.reveal-confetti span:nth-child(5n) {
+  background: var(--blush);
+}
 @media (max-width: 640px) {
-  .scrapbook-edge-decor .css-bow { transform:scale(.62); }.bow-top-left{left:-22px}.bow-top-right{right:-22px}
-  .sticker-one{top:22%;left:-14px}.sticker-two{top:80%;right:-12px}.paper-flower{font-size:34px}.lace-strip{opacity:.45}
-  .collage-label{font-size:16px}.label-portrait{top:0;right:2%}.label-note{top:-3%;left:0}.label-snapshot{top:-3%;left:30%}.scrap-note{font-size:16px}.scrap-note-left{left:-3%;bottom:4%}.scrap-note-right{right:-3%;bottom:-3%}.mini-cake{right:0;top:25%}
+  .scrapbook-edge-decor .css-bow {
+    transform: scale(0.62);
+  }
+  .bow-top-left {
+    left: -22px;
+  }
+  .bow-top-right {
+    right: -22px;
+  }
+  .sticker-one {
+    top: 22%;
+    left: -14px;
+  }
+  .sticker-two {
+    top: 80%;
+    right: -12px;
+  }
+  .paper-flower {
+    font-size: 34px;
+  }
+  .lace-strip {
+    opacity: 0.45;
+  }
+  .collage-label {
+    font-size: 16px;
+  }
+  .label-portrait {
+    top: 0;
+    right: 2%;
+  }
+  .label-note {
+    top: -3%;
+    left: 0;
+  }
+  .label-snapshot {
+    top: -3%;
+    left: 30%;
+  }
+  .scrap-note {
+    font-size: 16px;
+  }
+  .scrap-note-left {
+    left: -3%;
+    bottom: 4%;
+  }
+  .scrap-note-right {
+    right: -3%;
+    bottom: -3%;
+  }
+  .mini-cake {
+    right: 0;
+    top: 25%;
+  }
 }
 
 @media (prefers-reduced-motion: reduce) {
