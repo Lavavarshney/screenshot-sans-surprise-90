@@ -46,7 +46,7 @@ export function EditablePhotoFrame({
       className={`editable-photo-frame relative ${polaroid ? "bg-paper p-3 pb-4" : "bg-ivory p-2.5 pb-4"}`}
       style={{ transform: `rotate(${rotate}deg)` }}
     >
-      <div className="relative flex aspect-[4/3] items-center justify-center overflow-hidden bg-ivory">
+      <div className="relative flex items-center justify-center overflow-hidden bg-ivory">
         {src ? (
           <img
             src={src}
