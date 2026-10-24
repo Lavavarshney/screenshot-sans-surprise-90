@@ -89,7 +89,14 @@ function GiftPage() {
               <p className="mx-auto mt-2 max-w-lg font-hand text-2xl text-ink/80">
                 Add your own photos and make this page yours.
               </p>
-              <div className="akanxi-photo-collage mt-7 text-left">
+              <div className="akanxi-scrapbook-stage relative mt-7 text-left">
+                <span className="gift-margin-note gift-margin-note-left">little moments</span>
+                <span className="gift-margin-note gift-margin-note-right">made with love</span>
+                <span className="gift-sticker gift-sticker-heart">always us</span>
+                <span className="gift-sticker gift-sticker-star">best day</span>
+                <span className="gift-arrow gift-arrow-one" aria-hidden="true">↘</span>
+                <span className="gift-arrow gift-arrow-two" aria-hidden="true">↗</span>
+                <div className="akanxi-photo-collage">
                 <div className="akanxi-photo-frame-1">
                   <EditablePhotoFrame
                     index={0}
@@ -109,6 +116,7 @@ function GiftPage() {
                 </div>
                 <div className="akanxi-photo-frame-5">
                   <EditablePhotoFrame index={4} rotate={1} variant="polaroid" initialSrc={festivalPhoto} />
+                </div>
                 </div>
               </div>
             </section>

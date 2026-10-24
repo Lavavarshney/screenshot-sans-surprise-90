@@ -225,7 +225,7 @@ function LandingPage() {
               variant="polaroid"
               rotate={2.5}
               onOpen={() => setLightboxIndex(3)}
-              className="w-44 md:mt-6 md:w-52"
+              className="w-64 md:mt-8 md:w-80"
             />
             <Squiggle className="hidden w-28 self-center opacity-70 md:block" />
             <PressedFlower className="hidden h-8 w-8 self-end opacity-75 md:ml-2 md:block" />
