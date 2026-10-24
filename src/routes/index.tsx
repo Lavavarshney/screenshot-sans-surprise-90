@@ -126,7 +126,7 @@ function LandingPage() {
         </header>
 
         {/* ------- collage ------- */}
-        <section className="birthday-collage relative mt-6 grid gap-7 md:mt-8 md:grid-cols-12 md:gap-x-8 md:gap-y-3">
+        <section className="birthday-collage relative mt-4 grid gap-4 md:mt-5 md:grid-cols-12 md:gap-x-6 md:gap-y-0">
           {/* large portrait */}
           <div className="relative md:col-span-7 md:pt-2">
             <span className="collage-label label-portrait">best memories</span>

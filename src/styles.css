@@ -713,8 +713,9 @@
 }
 .cake-pop {
   position: absolute;
-  left: 50%;
-  top: -2%;
+  left: auto;
+  right: 11%;
+  top: 8%;
   z-index: 3;
   width: 86px;
   height: 54px;
@@ -753,37 +754,76 @@
   font-size: 23px;
   color: var(--burgundy);
 }
-@keyframes confetti-shower {
-  0% {
-    opacity: 0;
-    transform: translate3d(0, -12vh, 0) rotate(0);
-  }
-  12% {
-    opacity: 1;
-  }
-  100% {
-    opacity: 0.9;
-    transform: translate3d(calc((var(--i) * 17px) - 280px), 110vh, 0) rotate(calc(var(--i) * 83deg));
-  }
+@keyframes confetti-burst {
+  0% { opacity: 0; transform: translate(-50%, -50%) scale(0.2) rotate(0deg); }
+  8% { opacity: 1; }
+  100% { opacity: 0.95; transform: translate(calc(var(--x) * 1px), calc(var(--y) * 1px)) scale(1) rotate(540deg); }
+}
+@keyframes confetti-fall {
+  0% { opacity: 0; transform: translate3d(0, -18vh, 0) rotate(0deg); }
+  10% { opacity: 1; }
+  100% { opacity: 0.9; transform: translate3d(var(--drift), 115vh, 0) rotate(720deg); }
 }
 .confetti-burst-origin {
   position: absolute;
   left: 50%;
-  top: 12%;
+  top: 42%;
   width: 1px;
   height: 1px;
 }
+.reveal-confetti {
+  position: fixed !important;
+  z-index: 50;
+  inset: 0;
+  overflow: visible !important;
+}
 .reveal-confetti span {
   position: absolute;
-  left: calc((var(--i) * 29) % 100 * 1%);
-  top: -12px;
-  width: 8px;
-  height: 14px;
+  left: 50%;
+  top: 42%;
+  width: 10px;
+  height: 18px;
   background: var(--cherry);
   border-radius: 2px;
-  animation: confetti-shower calc(1.1s + (var(--i) % 7) * 0.12s) cubic-bezier(0.2, 0.7, 0.3, 1)
-    calc(var(--i) * 12ms) both;
+  animation: confetti-burst 0.85s cubic-bezier(0.2, 0.8, 0.3, 1) both;
+  animation-delay: calc(var(--i) * 8ms);
+  --x: 0;
+  --y: 0;
 }
+.reveal-confetti span:nth-child(1) { --x: -430; --y: -220; }
+.reveal-confetti span:nth-child(2) { --x: -350; --y: -310; }
+.reveal-confetti span:nth-child(3) { --x: -280; --y: -180; }
+.reveal-confetti span:nth-child(4) { --x: -210; --y: -350; }
+.reveal-confetti span:nth-child(5) { --x: -130; --y: -250; }
+.reveal-confetti span:nth-child(6) { --x: -60; --y: -330; }
+.reveal-confetti span:nth-child(7) { --x: 40; --y: -290; }
+.reveal-confetti span:nth-child(8) { --x: 140; --y: -360; }
+.reveal-confetti span:nth-child(9) { --x: 240; --y: -230; }
+.reveal-confetti span:nth-child(10) { --x: 340; --y: -320; }
+.reveal-confetti span:nth-child(11) { --x: 430; --y: -170; }
+.reveal-confetti span:nth-child(12) { --x: -390; --y: -80; }
+.reveal-confetti span:nth-child(13) { --x: -300; --y: -40; }
+.reveal-confetti span:nth-child(14) { --x: -180; --y: -120; }
+.reveal-confetti span:nth-child(15) { --x: -80; --y: -60; }
+.reveal-confetti span:nth-child(16) { --x: 80; --y: -110; }
+.reveal-confetti span:nth-child(17) { --x: 180; --y: -50; }
+.reveal-confetti span:nth-child(18) { --x: 300; --y: -130; }
+.reveal-confetti span:nth-child(19) { --x: 400; --y: -70; }
+.reveal-confetti span:nth-child(20) { --x: -240; --y: 40; }
+.reveal-confetti span:nth-child(21) { --x: -120; --y: 90; }
+.reveal-confetti span:nth-child(22) { --x: 0; --y: 70; }
+.reveal-confetti span:nth-child(23) { --x: 120; --y: 100; }
+.reveal-confetti span:nth-child(24) { --x: 240; --y: 30; }
+.reveal-confetti span:nth-child(25) { --x: -360; --y: 140; }
+.reveal-confetti span:nth-child(26) { --x: 360; --y: 130; }
+.reveal-confetti span:nth-child(27) { --x: -170; --y: 180; }
+.reveal-confetti span:nth-child(28) { --x: 170; --y: 190; }
+.reveal-confetti span:nth-child(29) { --x: -450; --y: 20; }
+.reveal-confetti span:nth-child(30) { --x: 450; --y: 40; }
+.reveal-confetti span:nth-child(31) { --x: -40; --y: -390; }
+.reveal-confetti span:nth-child(32) { --x: 40; --y: -400; }
+.reveal-confetti span:nth-child(33) { --x: -500; --y: -220; }
+.reveal-confetti span:nth-child(34) { --x: 500; --y: -200; }
 .reveal-confetti span:nth-child(2n) {
   width: 6px;
   height: 11px;
@@ -798,6 +838,15 @@
 }
 .reveal-confetti span:nth-child(5n) {
   background: var(--blush);
+}
+.reveal-confetti::after {
+  content: "";
+  position: absolute;
+  inset: -20vh 0 0;
+  background-image: repeating-linear-gradient(102deg, transparent 0 13vw, var(--cherry) 13vw 13.35vw, transparent 13.35vw 21vw), repeating-linear-gradient(76deg, transparent 0 17vw, var(--gold) 17vw 17.4vw, transparent 17.4vw 27vw), repeating-linear-gradient(115deg, transparent 0 11vw, var(--blush) 11vw 11.3vw, transparent 11.3vw 19vw);
+  background-size: 100% 100%;
+  opacity: 0;
+  animation: confetti-fall 2.5s ease-in 0.35s both;
 }
 @media (max-width: 640px) {
   .scrapbook-edge-decor .css-bow {
