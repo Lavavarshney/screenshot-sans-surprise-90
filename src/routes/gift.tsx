@@ -4,6 +4,11 @@ import { scrapbook } from "@/config/scrapbook";
 import { FlowerBloom } from "@/components/scrapbook/FlowerBloom";
 import { EditablePhotoFrame } from "@/components/scrapbook/PhotoFrame";
 import { PressedFlower, Tape } from "@/components/scrapbook/decorations";
+import dancePhoto from "@/assets/dance.jpeg";
+import fruitPhoto from "@/assets/fruit-salad.jpeg";
+import friendsPhoto from "@/assets/friends-burger.jpeg";
+import medalsPhoto from "@/assets/medals.jpeg";
+import festivalPhoto from "@/assets/festival.jpeg";
 
 export const Route = createFileRoute("/gift")({
   head: () => ({
@@ -90,19 +95,20 @@ function GiftPage() {
                     index={0}
                     rotate={-2}
                     variant="polaroid"
+                    initialSrc={dancePhoto}
                   />
                 </div>
                 <div className="akanxi-photo-frame-2">
-                  <EditablePhotoFrame index={1} rotate={2.5} variant="paper" />
+                  <EditablePhotoFrame index={1} rotate={2.5} variant="paper" initialSrc={fruitPhoto} />
                 </div>
                 <div className="akanxi-photo-frame-3">
-                  <EditablePhotoFrame index={2} rotate={1.5} variant="polaroid" />
+                  <EditablePhotoFrame index={2} rotate={1.5} variant="polaroid" initialSrc={friendsPhoto} />
                 </div>
                 <div className="akanxi-photo-frame-4">
-                  <EditablePhotoFrame index={3} rotate={-1.5} variant="paper" />
+                  <EditablePhotoFrame index={3} rotate={-1.5} variant="paper" initialSrc={medalsPhoto} />
                 </div>
                 <div className="akanxi-photo-frame-5">
-                  <EditablePhotoFrame index={4} rotate={1} variant="polaroid" />
+                  <EditablePhotoFrame index={4} rotate={1} variant="polaroid" initialSrc={festivalPhoto} />
                 </div>
               </div>
             </section>
