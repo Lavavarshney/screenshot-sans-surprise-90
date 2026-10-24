@@ -218,7 +218,7 @@ function LandingPage() {
               variant="polaroid"
               rotate={-3}
               onOpen={() => setLightboxIndex(2)}
-              className="w-44 md:w-52"
+              className="w-56 md:w-64"
             />
             <PhotoFrame
               photo={scrapbook.snapshots[1]}
