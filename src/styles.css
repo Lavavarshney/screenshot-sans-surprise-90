@@ -669,15 +669,42 @@
 
 @media (max-width: 640px) {
   .akanxi-scrapbook-stage { padding: 0.5rem 0 1rem; }
-  .akanxi-photo-collage { grid-template-columns: 1fr 1fr; gap: 1rem; }
+  .akanxi-photo-collage { grid-template-columns: 1fr; gap: 1.35rem; }
   .akanxi-photo-frame-1,
-  .akanxi-photo-frame-4 { grid-column: span 2; margin-top: 0; }
   .akanxi-photo-frame-2,
   .akanxi-photo-frame-3,
-  .akanxi-photo-frame-5 { grid-column: span 1; margin-top: 0; }
-  .scrapbook-gap-decor { width: 3.5rem; height: 4.5rem; opacity: 0.7; }
-  .scrapbook-gap-decor-left { left: -0.5rem; top: 18%; }
-  .scrapbook-gap-decor-right { right: -0.5rem; top: 48%; }
+  .akanxi-photo-frame-4,
+  .akanxi-photo-frame-5 { grid-column: 1; margin-top: 0; }
+  .scrapbook-gap-decor { display: none; }
+  .birthday-collage { overflow: hidden; }
+  .landing-paper-scrap,
+  .landing-washi-word,
+  .landing-collage-caption,
+  .collage-label,
+  .collage-ribbon-word,
+  .collage-stamp,
+  .scrap-note,
+  .ribbon-tail { display: none; }
+}
+
+@media (max-width: 767px) {
+  .birthday-header { padding-block: 1.75rem; }
+  .birthday-header h1 { font-size: clamp(2.3rem, 12vw, 4rem); line-height: 0.95; }
+  .birthday-header p { font-size: 1.35rem; line-height: 1.45; }
+  .birthday-collage > div { min-width: 0; }
+  .birthday-collage .ruled-lines { max-width: min(100%, 22rem); }
+  .birthday-collage .flex-wrap { gap: 1rem; }
+  .birthday-collage .flex-wrap > .w-56,
+  .birthday-collage .flex-wrap > .w-64 { width: min(100%, 20rem); }
+  .birthday-collage .flex-wrap > .w-64 { margin-top: 0; }
+}
+
+@media (max-width: 480px) {
+  .scrapbook-backdrop main { padding-inline: 0.75rem; }
+  .scrapbook-backdrop section { max-width: 100%; }
+  .scrapbook-backdrop h1 { font-size: 2.25rem; line-height: 1; }
+  .scrapbook-backdrop h2 { font-size: 1.65rem; }
+  .scrapbook-backdrop textarea { font-size: 1.65rem; line-height: 1.35; }
 }
 
 @utility shadow-photo {
