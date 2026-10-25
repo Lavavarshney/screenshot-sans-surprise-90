@@ -700,11 +700,20 @@
 }
 
 @media (max-width: 480px) {
-  .scrapbook-backdrop main { padding-inline: 0.75rem; }
+  .scrapbook-backdrop main { padding-inline: 0.75rem; padding-top: 4.25rem; }
   .scrapbook-backdrop section { max-width: 100%; }
   .scrapbook-backdrop h1 { font-size: 2.25rem; line-height: 1; }
   .scrapbook-backdrop h2 { font-size: 1.65rem; }
   .scrapbook-backdrop textarea { font-size: 1.65rem; line-height: 1.35; }
+  .scrapbook-backdrop .anim-fade-rise { width: 100%; }
+  .scrapbook-backdrop .anim-fade-rise > div { padding: 3.5rem 1.15rem 1.25rem; clip-path: none; }
+  .cake-pop-note { right: 0.8rem; top: 1.35rem; transform: scale(0.62); }
+}
+
+@media (max-width: 360px) {
+  .birthday-header { padding-inline: 0.65rem; }
+  .birthday-header h1 { font-size: clamp(1.55rem, 8.5vw, 2.25rem); }
+  .birthday-header p { font-size: 1.15rem; }
 }
 
 @utility shadow-photo {
@@ -845,7 +854,6 @@
 }
 .cake-pop {
   position: absolute;
-  left: auto;
   right: 11%;
   top: 8%;
   z-index: 3;
@@ -876,6 +884,11 @@
   font-size: 18px;
   color: var(--gold);
   white-space: nowrap;
+}
+.cake-pop-note {
+  right: 1.25rem;
+  top: -1.5rem;
+  transform: rotate(6deg) scale(0.8);
 }
 .cake-pop span {
   position: absolute;
