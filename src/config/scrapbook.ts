@@ -37,7 +37,7 @@ export const scrapbook = {
 
   /** Message revealed after the flowers bloom on page two. */
   giftMessage:
-    "Before anything else: thank you for every year of being you. Turn the page for a little scrapbook made just for you.",
+    "To my favourite person — Happy 21st AK.... Turn the page, there's more.",
 
   /** Landing page photographs. First is the large portrait; second the landscape. */
   heroPhoto: {
@@ -61,7 +61,7 @@ export const scrapbook = {
     {
       src: photoPolaroidA,
       alt: "Birthday cake with sparkler candles",
-      caption: "candles, take 47",
+      caption: "candles, take 21",
       width: 1024,
       height: 1024,
     },
