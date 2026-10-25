@@ -128,7 +128,7 @@ function LandingPage() {
       <main className="relative mx-auto max-w-7xl px-4 pb-24 pt-5 md:px-8 md:pt-8">
         <div className="mb-8 flex items-center justify-center gap-3 font-body text-[10px] font-bold uppercase tracking-[0.35em] text-burgundy/75">
           <span className="h-px w-10 bg-burgundy/30" />
-          a little book of us
+          a little book of you
           <span className="h-px w-10 bg-burgundy/30" />
         </div>
         {/* ------- headline ------- */}
