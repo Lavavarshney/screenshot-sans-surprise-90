@@ -64,11 +64,12 @@ function GiftPage() {
                 a page made just for you
               </p>
               <h1 className="mt-4 font-display text-5xl font-bold text-burgundy md:text-6xl">
-                Akanxi&apos;s Scrapbook
+                The Many Shades of Akanxi
               </h1>
               <p className="mx-auto mt-6 max-w-xl font-hand text-3xl leading-10 text-ink md:text-4xl">
-                To my favourite person — I made you this little book of us. Every page is a tiny
-                reminder of how loved you are.
+                From dancer mode to chef mode, athlete era to professional poser — a little
+                collection of all the iconic versions of you. Enjoy the chaos, and welcome to the
+                Akanxi multiverse. 💌
               </p>
               <div className="mt-8 flex justify-center gap-4" aria-hidden="true">
                 <span className="paper-flower static text-4xl">✿</span>
@@ -86,9 +87,6 @@ function GiftPage() {
               >
                 Five pages of memories
               </h2>
-              <p className="mx-auto mt-2 max-w-lg font-hand text-2xl text-ink/80">
-                Add your own photos and make this page yours.
-              </p>
               <div className="akanxi-scrapbook-stage relative mt-7 text-left">
                 <aside className="scrapbook-margin scrapbook-margin-left" aria-label="Scrapbook decorations">
                   <span className="margin-flower margin-flower-one" aria-hidden="true">✿</span>
@@ -109,19 +107,20 @@ function GiftPage() {
                     rotate={-2}
                     variant="polaroid"
                     initialSrc={dancePhoto}
+                    caption="Dancer Akanxi"
                   />
                 </div>
                 <div className="akanxi-photo-frame-2">
-                  <EditablePhotoFrame index={1} rotate={2.5} variant="paper" initialSrc={fruitPhoto} />
+                  <EditablePhotoFrame index={1} rotate={2.5} variant="paper" initialSrc={fruitPhoto} caption="Chef Akanxi making custard" />
                 </div>
                 <div className="akanxi-photo-frame-3">
-                  <EditablePhotoFrame index={2} rotate={1.5} variant="polaroid" initialSrc={friendsPhoto} />
+                  <EditablePhotoFrame index={2} rotate={1.5} variant="polaroid" initialSrc={friendsPhoto} caption="Khana Paglu Akanxi" />
                 </div>
                 <div className="akanxi-photo-frame-4">
-                  <EditablePhotoFrame index={3} rotate={-1.5} variant="paper" initialSrc={medalsPhoto} />
+                  <EditablePhotoFrame index={3} rotate={-1.5} variant="paper" initialSrc={medalsPhoto} caption="Champion Akanxi" />
                 </div>
                 <div className="akanxi-photo-frame-5">
-                  <EditablePhotoFrame index={4} rotate={1} variant="polaroid" initialSrc={festivalPhoto} />
+                  <EditablePhotoFrame index={4} rotate={1} variant="polaroid" initialSrc={festivalPhoto} caption="Model Akanxi" />
                 </div>
                 </div>
               </div>
@@ -208,9 +207,9 @@ From our all-nighter call before Safdarjung to our random Guruvayur Temple plan,
               <p className="font-body text-[10px] font-bold uppercase tracking-[0.35em] text-cherry">
                 a tiny keepsake
               </p>
-              <p className="mt-2 font-hand text-3xl text-burgundy">made with love, just for you</p>
+              <p className="mt-2 font-hand text-3xl text-burgundy">made by Lava</p>
               <p className="mt-1 font-hand text-xl text-ink/80">
-                with every page holding a little piece of us
+                with every page holding a little piece of you
               </p>
             </div>
           </div>

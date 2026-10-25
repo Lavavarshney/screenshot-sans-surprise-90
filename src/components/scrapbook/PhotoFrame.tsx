@@ -22,15 +22,17 @@ export function EditablePhotoFrame({
   rotate = 0,
   variant = "polaroid",
   initialSrc,
+  caption: initialCaption = "a little memory ♡",
 }: {
   index: number;
   rotate?: number;
   variant?: "paper" | "polaroid";
   initialSrc?: string;
+  caption?: string;
 }) {
   const inputRef = useRef<HTMLInputElement>(null);
   const [src, setSrc] = useState<string | null>(initialSrc ?? null);
-  const [caption, setCaption] = useState("a little memory ♡");
+  const [caption, setCaption] = useState(initialCaption);
   const polaroid = variant === "polaroid";
 
   function handleFile(event: ChangeEvent<HTMLInputElement>) {
@@ -80,15 +82,7 @@ export function EditablePhotoFrame({
           aria-label={`Caption for frame ${index + 1}`}
           className="min-w-0 flex-1 bg-transparent px-1 text-center font-hand text-xl text-ink outline-none placeholder:text-ink/60 focus-visible:ring-1 focus-visible:ring-burgundy"
         />
-        {src && (
-          <button
-            type="button"
-            onClick={() => inputRef.current?.click()}
-            className="shrink-0 font-body text-[9px] font-bold uppercase tracking-[0.16em] text-burgundy underline underline-offset-2"
-          >
-            replace
-          </button>
-        )}
+
       </div>
       <Tape className="-top-3 left-1/2 -translate-x-1/2" rotate={rotate - 2} />
     </figure>
