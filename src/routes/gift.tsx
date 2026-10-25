@@ -166,12 +166,9 @@ From our all-nighter call before Safdarjung to our random Guruvayur Temple plan,
       </Link>
 
       <main className="mx-auto flex min-h-screen max-w-3xl flex-col items-center justify-center px-5 py-14 text-center">
-        <div className="relative w-full">
-          <FlowerBloom className="h-[42vh] w-full max-w-2xl md:h-[46vh]" />
-          <div className="cake-pop" aria-hidden="true">
-            <span>♥</span>
+          <div className="relative w-full">
+            <FlowerBloom className="h-[42vh] w-full max-w-2xl md:h-[46vh]" />
           </div>
-        </div>
 
         {phase === "blooming" ? (
           <p className="font-hand text-xl text-ink/60">watch these open for you…</p>
@@ -189,6 +186,9 @@ From our all-nighter call before Safdarjung to our random Guruvayur Temple plan,
               className="torn-paper relative bg-paper p-7 shadow-paper md:p-9"
               style={{ transform: "rotate(0.5deg)" }}
             >
+              <div className="cake-pop cake-pop-note" aria-hidden="true">
+                <span>21</span>
+              </div>
               <PressedFlower className="absolute -left-3 -top-3 h-8 w-8" />
               <p className="font-hand text-2xl leading-9 text-ink md:text-[1.7rem] md:leading-10">
                 {scrapbook.giftMessage}

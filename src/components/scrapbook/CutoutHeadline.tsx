@@ -20,7 +20,7 @@ export function CutoutHeadline({ text }: { text: string }) {
   return (
     <h1
       aria-label={text}
-      className="flex flex-wrap items-center justify-center gap-x-4 gap-y-3 font-display text-3xl font-black uppercase leading-[0.92] tracking-tight md:text-6xl [&>span>span]:[-webkit-text-stroke:1.25px_currentColor]"
+      className="flex w-full flex-wrap items-center justify-center gap-x-1.5 gap-y-2 px-1 font-display text-[clamp(1.65rem,9vw,3rem)] font-black uppercase leading-[0.92] tracking-tight sm:gap-x-3 sm:gap-y-3 sm:text-4xl md:text-6xl [&>span>span]:[-webkit-text-stroke:1.25px_currentColor]"
     >
       {words.map((word, wi) => (
         <span key={wi} aria-hidden="true" className="flex gap-1">
