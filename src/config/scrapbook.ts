@@ -68,7 +68,7 @@ export const scrapbook = {
     {
       src: photoPolaroidB,
       alt: "Picnic",
-      caption: "the first drink",
+      caption: "gedi maarna",
       width: 1024,
       height: 1024,
     },
